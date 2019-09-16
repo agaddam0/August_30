@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Actual_Billable_Hours_per_Month__c</fullName>
+        <description>W-000090: Utilization information</description>
+        <externalId>false</externalId>
+        <label>Actual Billable Hours per Month</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Billable_per_Month__c</fullName>
+        <description>W-000090: Utilization information</description>
+        <externalId>false</externalId>
+        <formula>Actual_Billable_Hours_per_Month__c / Expected_Billable_Hrs_per_Month__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Actual Billable % per Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Billable_Month__c</fullName>
+        <description>W-000090: Utilization information</description>
+        <externalId>false</externalId>
+        <label>Billable Month</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>January</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>February</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>March</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>April</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>May</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>June</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>July</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>August</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>September</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>October</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>November</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>December</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Expected_Billable_Hrs_per_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>154</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expected Billable Hrs per Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Billable_per_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>0.885</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expected Billable % per Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Project_Role_Hours__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>W-000090: Utilization information</description>
+        <externalId>false</externalId>
+        <label>Project Role Hours</label>
+        <referenceTo>Assigned_Resource__c</referenceTo>
+        <relationshipLabel>Billable Hours</relationshipLabel>
+        <relationshipName>Billable_Hours</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>W-000090: Utilization information.
+To track billable hours for each resource per month</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Billable Hour</label>
+    <nameField>
+        <displayFormat>Billable No. - {0000}</displayFormat>
+        <label>Billable No.</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Billable Hours</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

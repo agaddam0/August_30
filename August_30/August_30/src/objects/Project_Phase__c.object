@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Project_Phase_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Allegis_SF_Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name__r.Allegis_SF_Opportunity__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Allegis SF Opportunity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Allocation_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Allocation Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Resource__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned Resource</label>
+        <referenceTo>Assigned_Resource__c</referenceTo>
+        <relationshipLabel>Project Phases</relationshipLabel>
+        <relationshipName>Project_Phases</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>7000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity Name</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Project Phases</relationshipLabel>
+        <relationshipName>Project_Phases</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Qualification</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pursue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Negotiation/Review</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed Won</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed Lost</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed No Pursue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed No Bid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed Wash</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phase_Duration_Weeks__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase Duration (Weeks)</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phase_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Phase_Start_Date__c) + ( Phase_Duration_Weeks__c ) * 7</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phase End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Phase_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Phase_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Future</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phase_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase Title</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Name</label>
+        <referenceTo>Projects__c</referenceTo>
+        <relationshipLabel>Project Phases</relationshipLabel>
+        <relationshipName>Project_Phases</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Project_Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Phase</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Phase 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 6</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 7</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 8</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 9</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 10</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 11</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Phase 12</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Resource_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Resource Name</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>General</value>
+            </filterItems>
+            <filterItems>
+                <field>Contact.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Employee</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Project Phases</relationshipLabel>
+        <relationshipName>Project_Phases</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Project Phase</label>
+    <nameField>
+        <displayFormat>PRJPHS-{0000}</displayFormat>
+        <label>Phase ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Project Phases</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Project_Phase__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Phase_Title__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Phase_Start_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Project_Name__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Phase__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Phase_Title__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Phase_Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Resource_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Name__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Name__c</columns>
+        <columns>Project_Phase__c</columns>
+        <columns>Phase_Title__c</columns>
+        <columns>Phase_Status__c</columns>
+        <columns>Phase_Start_Date__c</columns>
+        <columns>Phase_End_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

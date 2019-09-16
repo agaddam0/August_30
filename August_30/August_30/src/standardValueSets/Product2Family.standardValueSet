@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>None</fullName>
+        <default>false</default>
+    </standardValue>
+    <standardValue>
+        <fullName>401(k)</fullName>
+        <default>false</default>
+    </standardValue>
+    <standardValue>
+        <fullName>Mutual Funds</fullName>
+        <default>false</default>
+    </standardValue>
+    <standardValue>
+        <fullName>Hedge Funds</fullName>
+        <default>false</default>
+    </standardValue>
+    <standardValue>
+        <fullName>Pension Funds</fullName>
+        <default>false</default>
+    </standardValue>
+    <standardValue>
+        <fullName>Retirement Funds</fullName>
+        <default>false</default>
+    </standardValue>
+</StandardValueSet>

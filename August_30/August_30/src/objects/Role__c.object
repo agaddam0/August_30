@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Role_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Assigned_Resource__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned Resource</label>
+        <referenceTo>Assigned_Resource__c</referenceTo>
+        <relationshipLabel>Roles</relationshipLabel>
+        <relationshipName>Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Open_Requisitions__c</fullName>
+        <description>Total Resources in the hiring stage</description>
+        <externalId>false</externalId>
+        <label>Open Requisitions</label>
+        <summaryFilterItems>
+            <field>Recruiting_Requisition__c.Hiring_Stage__c</field>
+            <operation>contains</operation>
+            <value>Level 1, Level 2, Level 3, Offered</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Recruiting_Requisition__c.Role__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Project_Phase__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Phase</label>
+        <referenceTo>Project_Phase__c</referenceTo>
+        <relationshipLabel>Roles</relationshipLabel>
+        <relationshipName>Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Name</label>
+        <referenceTo>Projects__c</referenceTo>
+        <relationshipLabel>Roles</relationshipLabel>
+        <relationshipName>Roles</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Recruiting_Requisition__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Recruiting Requisition</label>
+        <referenceTo>Recruiting_Requisition__c</referenceTo>
+        <relationshipLabel>Roles</relationshipLabel>
+        <relationshipName>Roles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Req_Offers_Accepted__c</fullName>
+        <description>Total count of Resources who have accepted the offer</description>
+        <externalId>false</externalId>
+        <label>Req Offers Accepted</label>
+        <summaryFilterItems>
+            <field>Recruiting_Requisition__c.Hiring_Stage__c</field>
+            <operation>equals</operation>
+            <value>Accepted</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Recruiting_Requisition__c.Role__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Req_Offers_Joined__c</fullName>
+        <description>Total Resources that have joined TEK</description>
+        <externalId>false</externalId>
+        <label>Req Offers Joined</label>
+        <summaryFilterItems>
+            <field>Recruiting_Requisition__c.Hiring_Stage__c</field>
+            <operation>equals</operation>
+            <value>Joined</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Recruiting_Requisition__c.Role__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Resource_Exceeded_Note__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF((Total_Assigned_Resources__c &gt; 1), "ALERT: More than one resource is assigned to this role.",'')</formula>
+        <label>Resource Exceeded Note</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Allocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Role Allocation %</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Role_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Role Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Role_Duration_Weeks__c</fullName>
+        <externalId>false</externalId>
+        <label>Role Duration (Weeks)</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Role_Start_Date__c)  +  30</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Role_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Role Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Specified</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>USA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>India</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bangalore</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bangalore w/Travel to US</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hyderabad</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hyderabad w/ Travel to US</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Role_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Role Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Role_on_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Role on Project</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Backup</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Blue Print Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Success Leader</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Delivery Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Developer HTML5 Sr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Developer Java WS/SF QA/SF Dev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Practice Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Process Business Analyst</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Project Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>QA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scrum Master</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scrum Master Jr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF App Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF App Builder</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Associate Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Associate Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Business Analyst</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Consultant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Designer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Developer Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Developer Lightning Specialist</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Integration Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Project Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Quality Analyst</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Quality Automation Engineer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Sr. Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Sr. Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF System Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Tech Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Sr. Tech Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Technical Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF TSM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Solution Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. BA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. QA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Technical Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Trainee</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SDM</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Assigned_Resources__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Assigned Resources</label>
+        <summaryForeignKey>Assigned_Resource__c.Role__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_of_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Total # of Position</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Role</label>
+    <nameField>
+        <displayFormat>Role-{0000}</displayFormat>
+        <label>Role ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Roles</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Role_on_Project__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Role_Start_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Role_Duration_Weeks__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Project__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Project_Phase__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Assigned_Resource__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Role_on_Project__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Role_Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Role_Duration_Weeks__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Phase__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Assigned_Resource__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Project__c</columns>
+        <columns>Role_on_Project__c</columns>
+        <columns>Role_Location__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Role__c.Project_Role</value>
+        </filters>
+        <label>All Billable Project Roles</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Non_billable_Practice_Roles</fullName>
+        <columns>NAME</columns>
+        <columns>Project__c</columns>
+        <columns>Role_Location__c</columns>
+        <columns>Role_End_Date__c</columns>
+        <columns>Total_of_Position__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Role__c.Practice_Role</value>
+        </filters>
+        <label>All Non-billable Practice Roles</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Practice_Role</fullName>
+        <active>true</active>
+        <description>Role for TEK Salesforce Practice hiring</description>
+        <label>Practice Role</label>
+        <picklistValues>
+            <picklist>Role_Location__c</picklist>
+            <values>
+                <fullName>Bangalore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bangalore w%2FTravel to US</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hyderabad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hyderabad w%2F Travel to US</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Specified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>USA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Role_on_Project__c</picklist>
+            <values>
+                <fullName>SDM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Business Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Sr%2E Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Sr%2E Tech Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Tech Lead</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Project_Role</fullName>
+        <active>true</active>
+        <description>Role for customer billable projects</description>
+        <label>Project Role</label>
+        <picklistValues>
+            <picklist>Role_Location__c</picklist>
+            <values>
+                <fullName>Bangalore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bangalore w%2FTravel to US</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hyderabad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hyderabad w%2F Travel to US</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Specified</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>USA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Role_on_Project__c</picklist>
+            <values>
+                <fullName>Backup</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Blue Print Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Success Leader</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delivery Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer HTML5 Sr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Developer Java WS%2FSF QA%2FSF Dev</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manager</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Practice Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Process Business Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF App Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF App Builder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Associate Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Associate Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Business Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Consultant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Designer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Developer Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Developer Lightning Specialist</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Integration Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF PM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Project Coordinator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Quality Analyst</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Quality Automation Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Sr%2E Admin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Sr%2E Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Sr%2E Tech Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF System Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF TSM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Tech Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SF Technical Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scrum Master</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scrum Master Jr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solution Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sr%2E BA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sr%2E Developer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sr%2E QA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trainee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

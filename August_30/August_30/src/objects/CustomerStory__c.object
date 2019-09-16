@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>CustomerStories</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Focus__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Focus</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Challenge__c</fullName>
+        <externalId>false</externalId>
+        <label>Challenge</label>
+        <length>400</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Commerce_Cloud__c</fullName>
+        <externalId>false</externalId>
+        <label>Commerce Cloud</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Apple Pay deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>B2B Digital Commerce implementation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Commerce Cloud Accelerator package launch</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Commerce Cloud Order Management Solution</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Commerce Cloud Store Solution</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Digital Store Solution</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>E2E services - logistics, warehousing, customer service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>eCommerce Site/full re-platform</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Einstein (Predictive Intelligence)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>High level discovery &amp; documentation - independent project</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MaaS (Merchandising as a Service) - managing a customer site</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Major site re-design/re-brand/additional sites rolled out</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Multi-brand project</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Multi-country project</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Optimisation Project - SEO, MVT/AB, UX/UI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Solution Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Solution Support Customer - takeover</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Community_Cloud__c</fullName>
+        <externalId>false</externalId>
+        <label>Community Cloud</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Chatter (process collaboration)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Community - Agency and Company Collaboration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Community - Marketing and E-Commerce</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Community - Self Service (B to B)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Community - Self Service (B to C)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Community - User Group/ Advisory Council</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employee Community - Internal Helpdesk</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Employee Community - Social Intranet</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lightning Bolt Deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lightning Community Deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Partner Community - Agents and Brokers (distributors/dealers)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Partner Community - Channel Sales</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce CPQ for Communities (SteelBrick)</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company_Overview__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Overview</label>
+        <length>400</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>CustomerStories</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Executive_Sponsor_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Executive Sponsor Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Executive_Sponsor_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Executive Sponsor First Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Executive_Sponsor_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Executive Sponsor Last Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_System_Admin_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer System Admin Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_System_Admin_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer System Admin First Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_System_Admin_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer System Admin Last Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Desk_com__c</fullName>
+        <externalId>false</externalId>
+        <label>Desk.com</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Admin Configuration and Best Practices</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>API</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Support Center Branding</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Industry__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aerospace and Defense</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Agriculture and Mining</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Automotive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Communications</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Consumer Goods</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Energy and Utilities</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Engineering, Construction, and Real Estate</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Services: Banking</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Services: Capital Markets</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Services: Insurance</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Healthcare and Life Sciences: Medical Devices</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Healthcare and Life Sciences: Devices</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Healthcare and Life Sciences: Pharma</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Healthcare and Life Sciences: Provider</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>High Tech</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Higher Education</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hospitality, Travel, Transportation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manufacturering</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Media</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non-Profit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Oil and Gas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Professional Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Public Sector: Federal</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Public Sector: State/Local</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Lessons_Learned__c</fullName>
+        <externalId>false</externalId>
+        <label>Quotes</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Marketing_Cloud__c</fullName>
+        <externalId>false</externalId>
+        <label>Marketing Cloud</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advertising Studio</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Amp Script</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Audience Builder</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Automation Studio</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Commerce Cloud Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contact Builder/Journey Builder</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Builder/Email</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer Data Mgmt (other integration)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Discover (reporting tool)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DMP for Marketer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>E-Commerce Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Google Analytics Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Landing Pages / Cloud Pages</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mobile Push</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mobile SMS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Predictive Offerings</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sales Cloud Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Cloud Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Social Studio (Buddy Media, Radian6)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Web Analytic Integration</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_of_Users__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Users</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1-5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6-20</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>21-100</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>101-500</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>501-3,500</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3,500+</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PDO_AppExchange_App_Development__c</fullName>
+        <externalId>false</externalId>
+        <label>PDO: AppExchange App Development</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Integration / Connected Apps / Lightning Connect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LMA / COA / Environment Hub</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Namespaces / Managed Packages</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Security Review and AppEx listing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Shield (encryption, event monitoring, field history)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Trialforce</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Wave Analytics</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Products</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Product 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Product 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service 2</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Project End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Go_Live_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Go-Live Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>On Hold</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Terminated</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <referenceTo>Projects__c</referenceTo>
+        <relationshipLabel>Customer Stories Search</relationshipLabel>
+        <relationshipName>Customer_Stories_Search</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>CustomerStories</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Results__c</fullName>
+        <externalId>false</externalId>
+        <label>Results</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sales_Cloud__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Cloud</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Back office Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Email and Calendar Integration (Microsoft/Google)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Forecasting</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Large Scale implementation (over 300 sales reps)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Leads and Campaigns</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lightning Deployment (new org)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lightning Migration (Classic to Lightning)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mobile</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Operational Analytics (reports and dashboards)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity/Pipeline Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pardot</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Person Accounts</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sales Cloud Einstein</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sales Console</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce Billing Implementation (Steelbrick)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce CPQ Implementation (Steelbrick)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SalesforceIQ Inbox Deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Territory Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Workflow and Approval Process</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sales_Reference__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This picklist will determine what image shows up for the "Use Contact As Reference?"</inlineHelpText>
+        <label>Sales Reference</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Salesforce_Einstein_Analytics__c</fullName>
+        <externalId>false</externalId>
+        <label>Salesforce Einstein Analytics</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Einstein Analytics Platform</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Einstein Discovery Deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Einstein Sales Analytics Deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Einstein Service Analytics Deployment</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salesforce_Industry_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Salesforce Industry Products</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Financial Services Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Government Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Health Cloud</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salesforce_Platform__c</fullName>
+        <externalId>false</externalId>
+        <label>Salesforce Platform</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Application Development Lifecycle &amp; Deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Custom App Dev (Lightning and Javascript)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Custom App Dev (Visualforce and APEX)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Einstein Platform Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Heroku Application Development and Data Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Identity and SSO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Integration incl Platform Events</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Internet of Things (IOT)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Large Data Volumes (over 5 Million Records in the org)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mobile Custom App Dev (Salesforce SDK/Lightning Platform)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Reporting against custom data</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Security (compliance products)</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Salesforce_org_Foundation__c</fullName>
+        <externalId>false</externalId>
+        <label>Salesforce.org (Foundation)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Higher Education Data Architect (HEDA)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non Profit Success Pack</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Send_Customer_Survey_to__c</fullName>
+        <externalId>false</externalId>
+        <label>Send Customer Survey to :</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Salesforce Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Executive Sponsor</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_Cloud__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Cloud</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>B to B</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>B to C</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Back office Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Case Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CTI (Computer Telephony Integration)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Entitlements/SLAs</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Implement Flows</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Knowledge Management</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Large Implementation - over 1000 agents</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lightning Deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Lightning Migration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Live Agent (Chat)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LiveMessage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Communities/Portals/Help Center</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Console / Agent Desktop Integration</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Social Customer Svs (Radian6 integration)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SOS and Snap-Ins</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Sharing_Restriction__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This picklist will determine the image that shows up for "Able to Mention Customer Name?"</inlineHelpText>
+        <label>Sharing Restrictions</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Educational Use Only - Do Not Mention Customer Name</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Approved for External Use - OK to Mention Customer Name</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Solution__c</fullName>
+        <externalId>false</externalId>
+        <label>Solution</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Solutions__c</fullName>
+        <externalId>false</externalId>
+        <label>Story</label>
+        <length>20000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>20</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Submitted</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Backlog</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Available</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Story_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Story Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CustomerStories</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Story_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Story Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Win</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Loss</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Survey_Language__c</fullName>
+        <externalId>false</externalId>
+        <label>Survey Language</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>English</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Synopsis__c</fullName>
+        <externalId>false</externalId>
+        <label>Synopsis</label>
+        <length>400</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Team__c</fullName>
+        <externalId>false</externalId>
+        <label>Team</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Win_Against__c</fullName>
+        <externalId>false</externalId>
+        <label>Win Against</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Competitor 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Competitor 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Competitor 3</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>callRef__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( ISPICKVAL( Sales_Reference__c , "Yes") ,  IMAGE("/resource/CSForce_Images/CSForce_Call.png", "Contact CAN be used as a reference"),  
+if( ISPICKVAL( Sales_Reference__c , "No"), IMAGE("/resource/CSForce_Images/CSForce_NoCall.png", "Contact CANNOT be used as a reference"), IMAGE("/resource/CSForce_Images/CSForce_unknown.png", "It is UNKNOWN if contact can be used as a reference"))
+)</formula>
+        <inlineHelpText>This image is set by the "Sales Reference" picklist.</inlineHelpText>
+        <label>Use Contact As Reference?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sharingR__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( ISPICKVAL( Sharing_Restriction__c , "Educational Use Only - Do Not Mention Customer Name") ,  IMAGE("/resource/CSForce_Images/CSForce_Edu.png", "Educational Use Only - Do Not Mention Customer Name"), IMAGE("/resource/CSForce_Images/CSForce_ExtUse.png", "Approved for External Use - OK to Mention Customer Name"))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This image is set by the "Share Restrictions" picklist.</inlineHelpText>
+        <label>Able to Mention Customer Name?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Customer Stories Search</label>
+    <nameField>
+        <label>Title</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Customer Stories Search</pluralLabel>
+    <searchLayouts />
+    <sharingModel>Private</sharingModel>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Project__c</columns>
+        <columns>Story_Owner__c</columns>
+        <columns>Win_Against__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Available</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Synopsis__c</columns>
+        <columns>Solutions__c</columns>
+        <columns>Win_Against__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Available</value>
+        </filters>
+        <label>Available</label>
+    </listViews>
+    <listViews>
+        <fullName>Visible_in_Portal</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Synopsis__c</columns>
+        <columns>Solutions__c</columns>
+        <columns>Win_Against__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Sharing_Restriction__c</field>
+            <operation>equals</operation>
+            <value>Approved for External Use - OK to Mention Customer Name</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Available</value>
+        </filters>
+        <label>Visible in Portal</label>
+        <language>en_US</language>
+    </listViews>
+</CustomObject>

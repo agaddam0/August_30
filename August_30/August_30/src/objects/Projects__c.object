@@ -1,0 +1,1971 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Project_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is for 'Internal Project' record type only. It is created for reporting purpose, specifically for 'Resource Gap per Month' where we need to show Internal Projects that are active and External Projects that are not yet Active (External projects in various Opportunity Stages).</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Aging__c</fullName>
+        <externalId>false</externalId>
+        <formula>TODAY() -  Project_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aging</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Allegis_SF_Opportunity_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Allegis SF Opportunity ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Client_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Name</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Activision Marketing Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Intelligrated</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mobile Mini</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>P&amp;G</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sony</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>T.Rowe Price</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Billing_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Name__r.BillingStreet &amp; BR() &amp;  Account_Name__r.BillingCity &amp; BR() &amp; Account_Name__r.BillingState &amp; BR() &amp;  Account_Name__r.BillingPostalCode &amp; BR() &amp; Account_Name__r.BillingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Billing Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Executive_Sponsor_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Executive Sponsor Email</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Executive_Sponsor_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Executive Sponsor First Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Executive_Sponsor_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Executive Sponsor Last Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_SFDC_Admin_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer SFDC Admin Email</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_SFDC_Admin_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer SFDC Admin First Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_SFDC_Admin_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer SFDC Admin Last Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Service_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Name__r.ShippingStreet &amp; BR() &amp; Account_Name__r.ShippingCity &amp; BR() &amp; Account_Name__r.ShippingState &amp; BR() &amp; Account_Name__r.ShippingPostalCode &amp; BR() &amp;  Account_Name__r.ShippingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Service Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Delivery_Manager_GDP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Delivery Manager (GDP)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Delivery Manager (GDP))</relationshipLabel>
+        <relationshipName>Projects3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Engagement_Life_Cycle_Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Engagement Life Cycle Phase</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Initiation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Execution</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hold</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GDP_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>GDP ID</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GDP_Project_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>GDP Project Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GDP_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>GDP Site</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Global_Delivery_Manager_GDP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Global Delivery Manager (GDP)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Global Delivery Manager (GDP))</relationshipLabel>
+        <relationshipName>Projects2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Go_Live_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Go Live Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>India_Resource_Roles__c</fullName>
+        <externalId>false</externalId>
+        <label>India Resource Roles</label>
+        <summaryFilterItems>
+            <field>Role__c.Role_Location__c</field>
+            <operation>notEqual</operation>
+            <value>Not Specified, USA</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Role__c.Project__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>OSG_BOA__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>OSG BOA</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (OSG BOA)</relationshipLabel>
+        <relationshipName>Projects8</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OSG_POA__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>OSG POA</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (OSG POA)</relationshipLabel>
+        <relationshipName>Projects7</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity Name</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PMLC_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>PMLC Stage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Initiation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Execution</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closure</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PSID__c</fullName>
+        <externalId>false</externalId>
+        <label>PSID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Project</label>
+        <referenceTo>Projects__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Portal_Project_Health__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Portal Project Health</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>On-Track</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>At-Risk</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Partner_Portal_Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Portal Project Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>On-Hold</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Terminated</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phase_Role__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Phase Role</label>
+        <referenceTo>Phase_Role__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Practice_Lead_GDP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Practice Lead (GDP)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Practice Lead (GDP))</relationshipLabel>
+        <relationshipName>Projects5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Practice_Manager_Director__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Practice Manager (Director)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Practice Manager (Director))</relationshipLabel>
+        <relationshipName>Projects6</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>B2B Commerce (Cloud Craze)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>B2C Commerce</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Community Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Custom App Dev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Education Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Einstein Analytics</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Field Service Lightning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Financial Service Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Government Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Health Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Heroku</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IoT Cloud / Thunder</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Marketing Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mobile Custom App Dev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mulesoft</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pardot</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PDO: AppExchange App Development</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce CPQ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce Industry Products</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce.org (Foundation)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce.org Education Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce.org Nonprofit Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Salesforce Platform</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sales Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sales Cloud - Einstein</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Cloud</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Cloud - CTI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Service Cloud - Knowledge Management</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Description</label>
+        <length>5000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Duration_Weeks__c</fullName>
+        <description>Sum of Phase Duration in Weeks</description>
+        <externalId>false</externalId>
+        <label>Project Duration (Weeks)</label>
+        <summarizedField>Project_Phase__c.Phase_Duration_Weeks__c</summarizedField>
+        <summaryForeignKey>Project_Phase__c.Project_Name__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Project_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Project_Start_Date__c) + ( Project_Duration_Weeks__c ) * 7</formula>
+        <label>Project End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Manager_GDP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Manager (GDP)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Project Manager (GDP))</relationshipLabel>
+        <relationshipName>Projects4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Owner</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Phase__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Phase</label>
+        <referenceTo>Project_Phase__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Registered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Project Registered</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Project_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Interest</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scheduled</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity – Qualification</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Opportunity – Pursue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity - Bid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity – Negotiation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity – Closed Won</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity – Closed Lost</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity - Closed No Pursue</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity - Closed No Bid</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Opportunity - Closed Wash</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <referenceTo>Role__c</referenceTo>
+        <relationshipLabel>Projects</relationshipLabel>
+        <relationshipName>Projects</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDLC_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>SDLC Stage</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Planning</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Analysis</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Design</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Development</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Implementation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Testing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Deployment</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Maintenance</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SF_Project_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>SF Project Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SMP_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>SMP Site</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Send_Survey_To__c</fullName>
+        <externalId>false</externalId>
+        <label>Send Survey To</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Customer Executive Sponsor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Customer System Admin</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Send_Survey__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Send Survey</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Service_Delivery_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Service Delivery Manager</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Service Delivery Manager)</relationshipLabel>
+        <relationshipName>Projects1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Location</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Client Site</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Remote</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Bengaluru</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hyderabad</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Chicago</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dallas</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Montreal</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Survey_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>Survey Response</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Sent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Returned</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Returned</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Survey_Sent__c</fullName>
+        <externalId>false</externalId>
+        <label>Survey Sent</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Technical_Service_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Technical Service Manager</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Projects (Technical Service Manager)</relationshipLabel>
+        <relationshipName>ProjectsToContacts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>US_Resource_Roles__c</fullName>
+        <externalId>false</externalId>
+        <label>US Resource Roles</label>
+        <summaryFilterItems>
+            <field>Role__c.Role_Location__c</field>
+            <operation>equals</operation>
+            <value>USA</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Role__c.Project__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <label>Project</label>
+    <nameField>
+        <label>Project</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Projects</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Project_Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Project_Status__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <listViews>
+        <fullName>Active_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Project_Start_Date__c</columns>
+        <columns>Project_End_Date__c</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Projects__c.External_Project</value>
+        </filters>
+        <label>Active External (Billable) Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Project_Start_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>All_External_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Account_Name__c</columns>
+        <columns>Project_Start_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Projects__c.External_Project</value>
+        </filters>
+        <label>All External Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Internal_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Active__c</columns>
+        <columns>Project_Start_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Projects__c.Internal_Project</value>
+        </filters>
+        <label>All Internal Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>Closed_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Project_Start_Date__c</columns>
+        <columns>Project_End_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Complete</value>
+        </filters>
+        <label>Closed Projects</label>
+    </listViews>
+    <listViews>
+        <fullName>X2019_External_Projects</fullName>
+        <columns>NAME</columns>
+        <columns>Project_Start_Date__c</columns>
+        <columns>Project_End_Date__c</columns>
+        <columns>Project_Status__c</columns>
+        <columns>Account_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/1/2019 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Projects__c.External_Project</value>
+        </filters>
+        <filters>
+            <field>Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Opportunity – Qualification,Opportunity – Pursue,Opportunity - Bid,Opportunity – Negotiation</value>
+        </filters>
+        <label>Upcoming External Projects</label>
+    </listViews>
+    <recordTypes>
+        <fullName>External_Project</fullName>
+        <active>true</active>
+        <description>Customer billable projects</description>
+        <label>External Project</label>
+        <picklistValues>
+            <picklist>Client_Name__c</picklist>
+            <values>
+                <fullName>Activision Marketing Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intelligrated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Mini</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P%26G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sony</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T%2ERowe Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Engagement_Life_Cycle_Phase__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PMLC_Stage__c</picklist>
+            <values>
+                <fullName>Closure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Partner_Portal_Project_Health__c</picklist>
+            <values>
+                <fullName>At-Risk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-Track</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Partner_Portal_Project_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>B2B Commerce %28Cloud Craze%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2C Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom App Dev</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Einstein Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Field Service Lightning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Service Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Heroku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IoT Cloud %2F Thunder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Custom App Dev</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mulesoft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PDO%3A AppExchange App Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pardot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Cloud - Einstein</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce CPQ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Industry Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Eorg %28Foundation%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Eorg Education Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Eorg Nonprofit Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Cloud - CTI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Cloud - Knowledge Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity %E2%80%93 Closed Won</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity %E2%80%93 Negotiation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity %E2%80%93 Pursue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity %E2%80%93 Qualification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity %E2%80%93%C2%A0Closed Lost</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity - Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity - Closed No Bid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity - Closed No Pursue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity - Closed Wash</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SDLC_Stage__c</picklist>
+            <values>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Testing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Send_Survey_To__c</picklist>
+            <values>
+                <fullName>Customer Executive Sponsor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer System Admin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Location__c</picklist>
+            <values>
+                <fullName>Bengaluru</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hyderabad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Montreal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Remote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Survey_Response__c</picklist>
+            <values>
+                <fullName>Not Returned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Returned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Internal_Project</fullName>
+        <active>true</active>
+        <description>Non-billable projects</description>
+        <label>Internal Project</label>
+        <picklistValues>
+            <picklist>Client_Name__c</picklist>
+            <values>
+                <fullName>Activision Marketing Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intelligrated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Mini</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>P%26G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sony</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>T%2ERowe Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Engagement_Life_Cycle_Phase__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>PMLC_Stage__c</picklist>
+            <values>
+                <fullName>Closure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Partner_Portal_Project_Health__c</picklist>
+            <values>
+                <fullName>At-Risk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-Track</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Partner_Portal_Project_Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>B2B Commerce %28Cloud Craze%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2C Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom App Dev</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Einstein Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Field Service Lightning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Financial Service Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Government Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Heroku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IoT Cloud %2F Thunder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile Custom App Dev</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mulesoft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PDO%3A AppExchange App Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pardot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Cloud - Einstein</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce CPQ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Industry Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Eorg %28Foundation%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Eorg Education Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salesforce%2Eorg Nonprofit Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Cloud - CTI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Cloud - Knowledge Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SDLC_Stage__c</picklist>
+            <values>
+                <fullName>Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Testing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Send_Survey_To__c</picklist>
+            <values>
+                <fullName>Customer Executive Sponsor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer System Admin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Location__c</picklist>
+            <values>
+                <fullName>Bengaluru</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chicago</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Site</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hyderabad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Montreal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Remote</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Survey_Response__c</picklist>
+            <values>
+                <fullName>Not Returned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Returned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Fee Schedules</relationshipLabel>
+        <relationshipName>Fee_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Check_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Check No</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Confirmation_No__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Wire Transfer Confirmation Number</inlineHelpText>
+        <label>Confirmation No</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Card_CC_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Card CC Number</label>
+        <length>16</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Received__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Received</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Fee Schedules</relationshipLabel>
+        <relationshipName>Fee_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Details</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Payment_Method__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Check No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Wire Transfer Confirmation No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Card CC</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Check</controllingFieldValue>
+                <valueName>Check No</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Wire Transfer</controllingFieldValue>
+                <valueName>Wire Transfer Confirmation No</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Credit Card</controllingFieldValue>
+                <valueName>Credit Card CC</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Payment_Method__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Check</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Wire Transfer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Credit Card</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Payment_No__c</fullName>
+        <description>auto number [standard field, provided when creating custom object]</description>
+        <displayFormat>A-{000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Payment No</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Fee Schedule</label>
+    <nameField>
+        <label>Fee Schedule Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Fee Schedules</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <validationRules>
+        <fullName>Payment_Method_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+OR(
+ISCHANGED(Credit_Card_CC_Number__c),
+ISNEW()
+),
+NOT(ISBLANK(Credit_Card_CC_Number__c)),
+TEXT(Payment_Method__c) &lt;&gt; "Credit Card"
+)</errorConditionFormula>
+        <errorDisplayField>Credit_Card_CC_Number__c</errorDisplayField>
+        <errorMessage>You can not edit this field until the pick list payment method is Credit card</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Payment_Method_Validation_2</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+OR(
+ISCHANGED(Confirmation_No__c),
+ISNEW()
+),
+NOT(ISBLANK(Confirmation_No__c)),
+TEXT(Payment_Method__c) &lt;&gt; "Wire Transfer"
+)</errorConditionFormula>
+        <errorDisplayField>Confirmation_No__c</errorDisplayField>
+        <errorMessage>You can not edit this field until the pick list payment method is Wire Transfer</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Payment_Method_Validation_3</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+OR(
+ISCHANGED(Check_No__c),
+ISNEW()
+),
+NOT(ISBLANK(Check_No__c)),
+TEXT(Payment_Method__c) &lt;&gt; "Check"
+)</errorConditionFormula>
+        <errorDisplayField>Check_No__c</errorDisplayField>
+        <errorMessage>You can not edit this field until the pick list payment method is Check</errorMessage>
+    </validationRules>
+</CustomObject>

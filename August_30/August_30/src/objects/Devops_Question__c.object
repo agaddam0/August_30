@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>FreeText</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Answer__c</fullName>
+        <externalId>false</externalId>
+        <label>Answer</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Button click and real time</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1-4 Hours</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>One Day</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>More than a Day</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Program</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Project</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Both</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Always, we build or make changes directly in Production</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Intermittently on no particular schedule</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Less frequently than monthly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Every two weeks</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Every week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>A couple of times a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Daily</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Multiple times per day</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>We don’t test anything</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>We don’t test much, but what we do test, we do so manually</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>We manually test declarative and programmatic changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>We manually test only programmatic changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>We manually test only declarative changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Using Selenium, we test all declarative and programmatic changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Using Selenium, we only test programmatic changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Using Selenium we only test declarative changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Using Provar, we test all declarative and programmatic changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Using Provar, we only test programmatic changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Using Provar we only test declarative changes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>N/A, only one team or totally cross functional teams</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Change sets</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Ant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jenkins</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Intellij IDE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Eclipse IDE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mavens Mate IDE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Click Deploy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GearSet</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AutoRabit</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Copado</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Flosum</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Some</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>N/A, only one team</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>True</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>False</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Longer than 6 months</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>From  1 -  6 months</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>From 7 - 30 days</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>From 1 - 7 days</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>As desired, more than once a day</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Less than a day</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Longer than 1 month</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Less than an hour</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Greater than 60%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>46 - 60%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>0 - 15%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Less than a week</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>16 - 45%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>6 - 15%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>0 - 5%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>31 - 45%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>16 - 30%</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>isMultiSelect__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isMultiSelect</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isPickListField__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isPickListField</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Devops_Question</label>
+    <nameField>
+        <displayFormat>Q-{0000}</displayFormat>
+        <label>Devops Question Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Devops_Questions</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

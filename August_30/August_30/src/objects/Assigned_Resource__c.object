@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Assigned_Resource_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Active_Practice_Resource__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact_Name__r.Active_Practice_Resource__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Active Practice Resource</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Active_Role__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active Role</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Billable_Hours_per_Month__c</fullName>
+        <description>W-000090: Utilization information</description>
+        <externalId>false</externalId>
+        <label>Actual Billable Hours per Month</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Billable_percent_Month__c</fullName>
+        <description>W-000090: Utilization information</description>
+        <externalId>false</externalId>
+        <formula>Actual_Billable_Hours_per_Month__c / Expected_Billable_Hours_per_Month__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Actual Billable % per Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Billable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Billable</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Project_Roles1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Billable_Hours_per_Month__c</fullName>
+        <description>W-000090: Utilization information</description>
+        <externalId>false</externalId>
+        <formula>154</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expected Billable Hrs per Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Billable_percent_Month__c</fullName>
+        <description>W-000090: Utilization information</description>
+        <externalId>false</externalId>
+        <formula>0.885</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expected Billable % per Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Percent_Allocation__c</fullName>
+        <externalId>false</externalId>
+        <label>Percent Allocation</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>15</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>20</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>25</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>30</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>35</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>40</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>45</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>50</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>55</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>60</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>65</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>70</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>75</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>80</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>85</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>90</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>95</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>100</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Phase_Role__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Phase Role</label>
+        <referenceTo>Phase_Role__c</referenceTo>
+        <relationshipLabel>Assigned Resources</relationshipLabel>
+        <relationshipName>Assigned_Resources</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phase_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project_Phase__r.Phase_Title__c</formula>
+        <label>Phase Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Possible_Extension_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Possible Extension End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Power_of_One__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Power of One</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Name</label>
+        <referenceTo>Projects__c</referenceTo>
+        <relationshipName>Project_Roles</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Phase__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Phase</label>
+        <referenceTo>Project_Phase__c</referenceTo>
+        <relationshipLabel>Assigned Resources</relationshipLabel>
+        <relationshipName>Assigned_Resources</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Project_Name__r.Project_Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Project Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recruiting_Requisition__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Recruiting Requisition</label>
+        <referenceTo>Recruiting_Requisition__c</referenceTo>
+        <relationshipLabel>Assigned Resources</relationshipLabel>
+        <relationshipName>Assigned_Resources</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resource_Duration_Weeks__c</fullName>
+        <externalId>false</externalId>
+        <label>Resource Duration (Weeks)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resource_End_Date_Aging__c</fullName>
+        <externalId>false</externalId>
+        <formula>TODAY() -  Resource_End_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Resource End Date Aging</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resource_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Resource_Start_Date__c) + (Resource_Duration_Weeks__c) * 7</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Resource End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Resource_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Resource Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Resource_Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose "Reserved" when Opp Stage = Qualifying, Pursue, Bid, Negotiation 
+Choose "Assigned" when Opp Stage = Closed Won and Project Not yet Started 
+Choose "Active" when Project is Active and Resource has a Start Date assigned for the project</inlineHelpText>
+        <label>Resource Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Reserved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assigned</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Backup</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Rolled Off</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Role_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>Role__r.Role_Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Role as mentioned in the Pricing Sheet</inlineHelpText>
+        <label>Role Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Location__c</fullName>
+        <description>Where is the country of resource role's work location?</description>
+        <externalId>false</externalId>
+        <label>Role Location</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bangalore</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>India w/Travel to US</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Specified</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>USA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hyderabad</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Hyderabad w/ Travel to US</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>India</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Role_On_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Role On Project</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Backup</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Delivery Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Developer HTML5 Sr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Developer Java WS/SF QA/SF Dev</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Practice Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Project Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>QA </fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scrum Master</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Scrum Master Jr</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF App Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF App Builder</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Associate Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Associate Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Consultant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Designer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Developer Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Developer Lightning Specialist</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Integration Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF PM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Project Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Quality Analyst</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Quality Automation Engineer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Sr. Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Sr. Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF System Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Tech Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF Technical Architect</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SF TSM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr BA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr Developer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr QA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Technical Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Trainee</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <referenceTo>Role__c</referenceTo>
+        <relationshipLabel>Assigned Resources</relationshipLabel>
+        <relationshipName>Assigned_Resources</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <label>Assigned Resource</label>
+    <nameField>
+        <displayFormat>Resource-{0000}</displayFormat>
+        <label>Resource No</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Assigned Resources</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Project_Name__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Project_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Role_On_Project__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Resource_Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active_Role__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Billable__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Contact_Name__c</columns>
+        <columns>Resource_Status__c</columns>
+        <columns>Role_Description__c</columns>
+        <columns>Percent_Allocation__c</columns>
+        <columns>Project_Name__c</columns>
+        <columns>Resource_Start_Date__c</columns>
+        <columns>Resource_End_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Active_Practice_Resource__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>All Active Assigned Resources by Status</label>
+    </listViews>
+    <listViews>
+        <fullName>Billable_Assigned_Resources</fullName>
+        <columns>NAME</columns>
+        <columns>Contact_Name__c</columns>
+        <columns>Project_Name__c</columns>
+        <columns>Billable__c</columns>
+        <columns>Percent_Allocation__c</columns>
+        <columns>Resource_Duration_Weeks__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Billable__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Billable Assigned Resources</label>
+    </listViews>
+    <listViews>
+        <fullName>Practice_Resources</fullName>
+        <columns>NAME</columns>
+        <columns>Contact_Name__c</columns>
+        <columns>Project_Name__c</columns>
+        <columns>Percent_Allocation__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Active_Practice_Resource__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Practice Resource Allocations</label>
+    </listViews>
+    <validationRules>
+        <fullName>Dates_between_Resources_and_Role</fullName>
+        <active>true</active>
+        <description>Neither 'Resource Start Date nor 'Resource End Date' of the Assigned Resource should be outside the range of 'Role Start Date' &amp; 'Role End Date'.</description>
+        <errorConditionFormula>OR(Resource_Start_Date__c   &lt;   Role__r.Role_Start_Date__c, Resource_End_Date__c   &gt; Role__r.Role_End_Date__c)</errorConditionFormula>
+        <errorMessage>Resource Start or End date cannot exceed Role Start/End date</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <fields>
+        <fullName>Alternative_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Alternative Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Content__c</fullName>
+        <description>It will hold the actual notification description</description>
+        <externalId>false</externalId>
+        <label>Content</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Dedicated_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The Notifications actually belongs to which user</description>
+        <externalId>false</externalId>
+        <label>Dedicated To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Notifications</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Header_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Header Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Header__c</fullName>
+        <externalId>false</externalId>
+        <label>Header</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Href__c</fullName>
+        <externalId>false</externalId>
+        <label>Href</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Is_Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Active?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Publish_Date__c</fullName>
+        <description>it will hold the Published date of the notification</description>
+        <externalId>false</externalId>
+        <label>Publish Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Read__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>It will hold the boolean value whether the customer read the notification or not .</description>
+        <externalId>false</externalId>
+        <label>Read?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Valid_till__c</fullName>
+        <externalId>false</externalId>
+        <label>Valid till?</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>S-00006- It will hold the all the notifications pertains to the Customer Account</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Notification</label>
+    <nameField>
+        <displayFormat>N-{0000}</displayFormat>
+        <label>Notifications Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Notifications</pluralLabel>
+    <searchLayouts />
+    <sharingModel>ReadWrite</sharingModel>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <recordTypes>
+        <fullName>Personal_Notification</fullName>
+        <active>true</active>
+        <description>This record type is used to store personal notification record</description>
+        <label>Personal Notification</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Public_Notification</fullName>
+        <active>true</active>
+        <description>This record type is used to store public notification record</description>
+        <label>Public Notification</label>
+    </recordTypes>
+</CustomObject>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>TC_Field_Containing_Balance__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Field Containing Balance</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TC_IsNegativeInstrument__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>IsNegativeInstrument?</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Financial Account Detail</label>
+    <pluralLabel>Financial Account Details</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>
