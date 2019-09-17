@@ -13,11 +13,6 @@ public class TC_DevopsQuestionController
     Public list<response__c> BLlist5 {get;set;}
     Public list<response__c> BLlist6 {get;set;}
     Public Integer BLlistCount {get;set;}
-    Public string Base {get;set;}
-    Public string Beginnn {get;set;}
-    Public string Inter {get;set;}
-    Public string matu {get;set;}
-    public string eli {get;set;}
     Public string contextu {get;set;}
     Public Integer cultureCount {get;set;}
     Public Integer MeasurementCount {get;set;}
@@ -25,7 +20,7 @@ public class TC_DevopsQuestionController
     Public Integer ProcessCount {get;set;}
     
        
-    public TC_DevopsQuestionController(ApexPages.StandardController controller){
+    public TC_DevopsQuestionController(){
     
         id survid = ApexPages.currentPage().getParameters().get('surid');
         system.debug('survid @@@'+survid);
@@ -653,15 +648,15 @@ public class TC_DevopsQuestionController
         
         //end
         update sur; 
-        surrec1 = sur;
-     //PageReference pgr = new paPage.TC_devopsreport;//mail_pdf is the name of vf page
+        
+     PageReference pgr = Page.TC_devopsreport;//mail_pdf is the name of vf page
    //  pgr.getParameters().put('survey__c',recordId);
      
-    //pgr.getParameters().put('surid',recordId);
-   PageReference pgr = new PageReference('/apex/TC_devopsreport?surid='+recordId);
+    pgr.getParameters().put('surid',recordId);
+    //PageReference pgr = new PageReference('/apex/TC_devopsreport?surid=a3PP00000001BHYMA2');
         
         system.debug('pdf.getParameters().get(surid)'+pgr.getParameters().get('surid'));
-        system.debug('pdf.getParameters().get(id)'+pgr.getParameters().get('id'));
+        //system.debug('pdf.getParameters().get(id)'+pgr.getParameters().get('id'));
      // goToNextPage('email');
      Blob body;                
      try{
