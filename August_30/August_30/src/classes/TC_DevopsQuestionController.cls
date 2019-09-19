@@ -4,7 +4,7 @@ public class TC_DevopsQuestionController
     public static List<survey__c> survy{get;set;}
     
     public survey__c surrec{get;set;}
-    public static survey__c surrec1 {get;set;}
+    
     public List<response__c> resdetails{get;set;}
     Public list<response__c> BLlist1 {get;set;}
     Public list<response__c> BLlist2 {get;set;}
@@ -251,7 +251,7 @@ public class TC_DevopsQuestionController
     
     @AuraEnabled
     public static wrapper getSubmitQuestion(String output,String responseQuestion,String responseAnswer,String responseAutoNum,String recordId){
-        survey__c survy3 = [select Lead_Name__r.Email from survey__c where id =: recordId];
+        survey__c survy2 = [select id,Over_all_Maturity_Level__c,Lead_Name__r.Email,Technical__c,Culture__c,Process__c,Measurement__c from survey__c where id =: recordId];
         string quesOut;
         string maturityLevel;
         string vec1;
@@ -260,6 +260,7 @@ public class TC_DevopsQuestionController
         string quesType;
        
         Wrapper wrap = new Wrapper();
+        wrap.EmailId = survy2.Lead_Name__r.Email;
         TC_DevopsQuestion__mdt devquestion2 =new TC_DevopsQuestion__mdt();
         
         
@@ -292,7 +293,6 @@ public class TC_DevopsQuestionController
         
         if(res[0].Name == 'Q-0053'){
             List<Response__c> response=[select id,Name,Survey__c,Survey__r.Over_all_Maturity_Level__c,ResponseQuestion__c,ResponseAnswer__c from Response__c where Name IN ('Q-0050','Q-0051','Q-0052','Q-0053') and Survey__c =: recordId];
-            survey__c survy2 = [select id,Over_all_Maturity_Level__c,Lead_Name__r.Email from survey__c where id =: recordId];
             Decimal qus50ans = 0.0;
             Decimal qus51ans = 0.0;
             Decimal qus52ans = 0.0;
@@ -399,13 +399,13 @@ public class TC_DevopsQuestionController
             
           
             
-            update survy2;
+            //update survy2;
             
         }
         
         
         //for maturity analysis
-        survey__c sur = [select Technical__c,Culture__c,Process__c,Measurement__c from survey__c where id =: recordId];
+        //survey__c sur = [select Technical__c,Culture__c,Process__c,Measurement__c from survey__c where id =: recordId];
         integer s4 = 0;
         integer s3 = 0;
         integer s2 = 0;
@@ -461,22 +461,22 @@ public class TC_DevopsQuestionController
             
         }
         if(s6 > 0){
-            sur.Technical__c = 'Contextual';   
+            survy2.Technical__c = 'Contextual';   
         }else{
         if(s5 > 0){
-            sur.Technical__c = 'Elite';   
+            survy2.Technical__c = 'Elite';   
         }else{
             if(s4 > 0){
-                sur.Technical__c = 'Mature';
+                survy2.Technical__c = 'Mature';
             }else{
                 if(s3 > 0){
-                    sur.Technical__c = 'Intermediate';
+                    survy2.Technical__c = 'Intermediate';
                 }else{
                     if(s2 > 0){
-                        sur.Technical__c = 'Beginning';
+                        survy2.Technical__c = 'Beginning';
                     }else{
                         if(s1 > 0){
-                            sur.Technical__c = 'Baseline';
+                            survy2.Technical__c = 'Baseline';
                         }
                     }
                 }
@@ -515,22 +515,22 @@ public class TC_DevopsQuestionController
            
         }
         if(s6 > 0){
-            sur.Process__c = 'Contextual';   
+            survy2.Process__c = 'Contextual';   
         }else{
         if(s5 > 0){
-            sur.Process__c = 'Elite';   
+            survy2.Process__c = 'Elite';   
         }else{
             if(s4 > 0){
-                sur.Process__c = 'Mature';
+                survy2.Process__c = 'Mature';
             }else{
                 if(s3 > 0){
-                    sur.Process__c = 'Intermediate';
+                    survy2.Process__c = 'Intermediate';
                 }else{
                     if(s2 > 0){
-                        sur.Process__c = 'Beginning';
+                        survy2.Process__c = 'Beginning';
                     }else{
                         if(s1 > 0){
-                            sur.Process__c = 'Baseline';
+                            survy2.Process__c = 'Baseline';
                         }
                     }
                 }
@@ -568,23 +568,23 @@ public class TC_DevopsQuestionController
             }
                    }
         if(s6 > 0){
-            sur.Measurement__c = 'Contextual';   
+            survy2.Measurement__c = 'Contextual';   
         }else{
         
         if(s5 > 0){
-            sur.Measurement__c = 'Elite';   
+            survy2.Measurement__c = 'Elite';   
         }else{
             if(s4 > 0){
-                sur.Measurement__c = 'Mature';
+                survy2.Measurement__c = 'Mature';
             }else{
                 if(s3 > 0){
-                    sur.Measurement__c = 'Intermediate';
+                    survy2.Measurement__c = 'Intermediate';
                 }else{
                     if(s2 > 0){
-                        sur.Measurement__c = 'Beginning';
+                        survy2.Measurement__c = 'Beginning';
                     }else{
                         if(s1 > 0){
-                            sur.Measurement__c = 'Baseline';
+                            survy2.Measurement__c = 'Baseline';
                         }                    }
                 }
             }
@@ -622,22 +622,22 @@ public class TC_DevopsQuestionController
             
         }
         if(s6 > 0){
-            sur.Culture__c = 'Contextual';   
+            survy2.Culture__c = 'Contextual';   
         }else{
         if(s5 > 0){
-            sur.Culture__c = 'Elite';   
+            survy2.Culture__c = 'Elite';   
         }else{
             if(s4 > 0){
-                sur.Culture__c = 'Mature';
+                survy2.Culture__c = 'Mature';
             }else{
                 if(s3 > 0){
-                    sur.Culture__c = 'Intermediate';
+                    survy2.Culture__c = 'Intermediate';
                 }else{
                     if(s2 > 0){
-                        sur.Culture__c = 'Beginning';
+                        survy2.Culture__c = 'Beginning';
                     }else{
                         if(s1 > 0){
-                            sur.Culture__c = 'Baseline';
+                            survy2.Culture__c = 'Baseline';
                         }
                     }
                 }
@@ -645,44 +645,10 @@ public class TC_DevopsQuestionController
         }
         }
         
-        
-        //end
-        update sur; 
-        
-     PageReference pgr = Page.TC_devopsreport;//mail_pdf is the name of vf page
-   //  pgr.getParameters().put('survey__c',recordId);
+        survy2.Is_Survey_Completed__c = true;
      
-    pgr.getParameters().put('surid',recordId);
-    //PageReference pgr = new PageReference('/apex/TC_devopsreport?surid=a3PP00000001BHYMA2');
-        
-        system.debug('pdf.getParameters().get(surid)'+pgr.getParameters().get('surid'));
-        //system.debug('pdf.getParameters().get(id)'+pgr.getParameters().get('id'));
-     // goToNextPage('email');
-     Blob body;                
-     try{
-        system.debug('pdf.getContent()@@'+pgr.getContent());
-        body = pgr.getContent();
-      
-     }catch(VisualforceException e){
-         system.debug('e@@@@'+e.getMessage()+'%%%%%%%%%%%%%'+e.getStackTraceString());
-            body=Blob.valueOf('Some text');
-         body=Blob.valueOf('Some text');
-         body=Blob.valueOf('Some text');
-         system.debug('111111111');
-     }            
-      Messaging.EmailFileAttachment attach = new Messaging.EmailFileAttachment();
-      attach.setContentType('application/pdf');
-      attach.setFileName('SurveyDetails.pdf');
-      attach.setInline(false);
-      attach.Body = body;
-      Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-      mail.setUseSignature(false);
-      mail.setToAddresses(new String[] { survy3.Lead_Name__r.Email });
-      mail.setSubject('PDF Email Demo');
-      mail.setHtmlBody('Here is the email you requested! Check the attachment!');
-      mail.setFileAttachments(new Messaging.EmailFileAttachment[] { attach }); 
-      // Send the email    
-      Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
+        //end
+        update survy2; 
         return wrap;   
     }
     
@@ -697,6 +663,36 @@ public class TC_DevopsQuestionController
         @AuraEnabled public String maturityText{get;set;}
         @AuraEnabled public String maturity{get;set;}
         @AuraEnabled public Integer questioncount{get;set;}
+        @AuraEnabled public String EmailId{get;set;}
         
+    }
+    
+    
+    @AuraEnabled
+    public static string attachPDFInEmail(string surID, string emailid) {
+        PageReference pgr = Page.TC_devopsreport;
+      pgr.getParameters().put('surid',surID);
+      Messaging.EmailFileAttachment attach = new Messaging.EmailFileAttachment();
+      attach.setContentType('application/pdf');
+      attach.setFileName('SurveyDetails.pdf');
+      attach.setInline(false);
+      Blob b = pgr.getContent();
+      //System.debug('>>>>>>>>>>' + b.toString());
+      attach.Body = b;
+        
+        Attachment att = new Attachment();
+        att.Name = 'SurveyForm';
+        att.ParentId = surID;
+        att.body = b;
+        insert att;
+        
+      Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+      mail.setUseSignature(false);
+      mail.setToAddresses(new String[] { emailid });
+      mail.setSubject('PDF Email Demo');
+      mail.setHtmlBody('Here is the email you requested! Check the attachment!');
+      mail.setFileAttachments(new Messaging.EmailFileAttachment[] { attach }); 
+      Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
+        return 'success';
     }
 }

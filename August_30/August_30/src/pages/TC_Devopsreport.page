@@ -1,6 +1,6 @@
 <apex:page controller="TC_DevopsQuestionController" applyBodyTag="false" setup="false" sidebar="false" showHeader="false" renderAs="pdf">
-    <!--head>
-                <style type="text/css" media="print">
+    <head>
+              <!--  <style type="text/css" media="print">
                     @page {
                     	padding: 3cm 3cm 2cm 3cm;
                         @top-center {
@@ -28,15 +28,51 @@
                         }
                     
                     
+                    </style>-->
+        
+        <style type="text/css" media="print">
+                                 
+            @page {
+           margin-top: 4cm;
+            margin-bottom: 3cm;
+
+
+            @top-center {
+                content: element(header);
+            }
+            @bottom-left {
+                content: element(footer);
+            }
+        }
+
+        div.header {
+            padding: 10px;
+            position: running(header);
+        }
+        div.footer {
+            display: block;
+            padding: 5px;
+            position: running(footer);
+        }
+        .pagenumber:before {
+            content: counter(page);
+        }
+        .pagecount:before {
+            content: counter(pages);
+        }
+        div.content {
+            float: left;
+            width: 100%;
+        }     
                     </style>
-              </head-->
+              </head>
     <div class="header">
     	<img style = "height:70px;width:705px;" src="{!$Resource.TC_devopsfullheader}"/>
     </div>
-    
-
-    <div class="relative">
-        <div class="content absolute">
+        <div class="footer">
+      <img style = "height:100px;width:705px;" src="{!$Resource.TC_devopsfullfooter}"/>   
+    </div> 
+        <div class="content">
             <apex:form >
                 <apex:pageBlock >
                     <table class="table1" style="border: 1px solid black;width:100%;">
@@ -65,19 +101,22 @@
                             
                         </tr>
                         <tr>
-                            <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "2">Over All Maturity</th>
-                            <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "4">{!surrec.Over_all_Maturity_Level__c}</th>
+                            <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "6">Over All Maturity : {!surrec.Over_all_Maturity_Level__c}</th>
+                            
                             
                         </tr>
                     </table>
                     <br/>
                     <br/>
-                    <table class="table1" style="border: 1px solid black;width:100%">
+                    <div>
+                        
+                    
+                    <table class="table1" style="border: 1px solid black;width:100%;">
                         <tr>
                             <th class="th1" style = "text-align: center;border: 1px solid black;" colspan = "6">Maturity Level stand against each vector</th>
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;">Step 5: Predictable Continuous Delivery with 1 or more <br/> releases/day with IT deploying and Business releasing.</th>
+                            <th class="th1" style="border: 1px solid black;">Step 5: <br/>Predictable Continuous Delivery with 1 or more <br/> releases/day with IT deploying and Business releasing.<br/><br/></th>
                             <apex:outputText value="" rendered="{!cultureCount == 4}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -107,7 +146,7 @@
                             </apex:outputText>
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;" >Step 4: Automation of Version Control, Testing, Deploying,<br/> and Releasing</th>
+                            <th class="th1" style="border: 1px solid black;" >Step 4: <br/> Automation of Version Control, Testing, Deploying,and Releasing<br/><br/><br/></th>
                             <apex:outputText value="" rendered="{!cultureCount == 3}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -138,7 +177,7 @@
                             
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;">Step 3: Agile Releases (stories moved to production at least <br/> monthly; preferably, each sprint)</th>
+                            <th class="th1" style="border: 1px solid black;">Step 3: <br/> Agile Releases (stories moved to production at least monthly; preferably, each sprint)<br/><br/><br/></th>
                             <apex:outputText value="" rendered="{!cultureCount == 2}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -169,7 +208,7 @@
                             
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;">Step 2: Version Control System is Source of Truth across all environments: devs, <br/> admin, hot-fix, test, integration, production, scratch orgs, sandboxes, etc.</th>
+                            <th class="th1" style="border: 1px solid black;">Step 2: <br/> Version Control System is Source of Truth across all environments: devs, <br/> admin, hot-fix, test, integration, production, scratch orgs, sandboxes, etc.</th>
                             <apex:outputText value="" rendered="{!cultureCount == 1}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -200,7 +239,7 @@
                             
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;">Step 1: Salesforce Production Org = Source of Truth; component/feature based <br/> ad hoc releases</th>
+                            <th class="th1" style="border: 1px solid black;"><br/>Step 1: <br/> Salesforce Production Org = Source of Truth; component/feature based <br/> ad hoc releases</th>
                             <apex:outputText value="" rendered="{!cultureCount == 0}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -240,9 +279,11 @@
                             
                         </tr>
                     </table>
+                    </div>
+                    
                     <br/>
                     <br/>
-                    <table>
+                    <table style="margin-top: 30px;">
                         <tr>
                             <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "7">Questions and Responses</th>
                         </tr>
@@ -339,9 +380,8 @@
                     
                 </apex:pageBlock>
             </apex:form>
-           <div class="footer">
-      <img style = "height:70px;width:705px;" src="{!$Resource.TC_devopsfullfooter}"/>   
-    </div> 
-        </div>
-    </div>
+            </div>
+        
+        
+
 </apex:page>
