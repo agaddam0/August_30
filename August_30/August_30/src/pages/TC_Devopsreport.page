@@ -116,7 +116,7 @@
                             <th class="th1" style = "text-align: center;border: 1px solid black;" colspan = "6">Maturity Level stand against each vector</th>
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;">Step 5: <br/>Predictable Continuous Delivery with 1 or more <br/> releases/day with IT deploying and Business releasing.<br/><br/></th>
+                            <th class="th1" style="border: 1px solid black;">Level 5: <br/>Predictable Continuous Delivery with 1 or more <br/> releases/day with IT deploying and Business releasing.<br/><br/></th>
                             <apex:outputText value="" rendered="{!cultureCount == 4}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -146,7 +146,7 @@
                             </apex:outputText>
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;" >Step 4: <br/> Automation of Version Control, Testing, Deploying,and Releasing<br/><br/><br/></th>
+                            <th class="th1" style="border: 1px solid black;" >Level 4: <br/> Automation of Version Control, Testing, Deploying,and Releasing<br/><br/><br/></th>
                             <apex:outputText value="" rendered="{!cultureCount == 3}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -177,7 +177,7 @@
                             
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;">Step 3: <br/> Agile Releases (stories moved to production at least monthly; preferably, each sprint)<br/><br/><br/></th>
+                            <th class="th1" style="border: 1px solid black;">Level 3: <br/> Agile Releases (stories moved to production at least monthly; preferably, each sprint)<br/><br/><br/></th>
                             <apex:outputText value="" rendered="{!cultureCount == 2}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -208,7 +208,7 @@
                             
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;">Step 2: <br/> Version Control System is Source of Truth across all environments: devs, <br/> admin, hot-fix, test, integration, production, scratch orgs, sandboxes, etc.</th>
+                            <th class="th1" style="border: 1px solid black;">Level 2: <br/> Version Control System is Source of Truth across all environments: devs, <br/> admin, hot-fix, test, integration, production, scratch orgs, sandboxes, etc.</th>
                             <apex:outputText value="" rendered="{!cultureCount == 1}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>
@@ -239,7 +239,7 @@
                             
                         </tr>
                         <tr>
-                            <th class="th1" style="border: 1px solid black;"><br/>Step 1: <br/> Salesforce Production Org = Source of Truth; component/feature based <br/> ad hoc releases</th>
+                            <th class="th1" style="border: 1px solid black;"><br/>Level 1: <br/> Salesforce Production Org = Source of Truth; component/feature based <br/> ad hoc releases</th>
                             <apex:outputText value="" rendered="{!cultureCount == 0}">
                                 <td class="th1" style="border: 1px solid black;"><img style ="height:60px;width:60px;" src="{!$Resource.TC_DevopsreportTick}"/></td>
                             </apex:outputText>

@@ -689,8 +689,8 @@ public class TC_DevopsQuestionController
       Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
       mail.setUseSignature(false);
       mail.setToAddresses(new String[] { emailid });
-      mail.setSubject('PDF Email Demo');
-      mail.setHtmlBody('Here is the email you requested! Check the attachment!');
+      mail.setSubject('Devops survey report details');
+      mail.setHtmlBody('');
       mail.setFileAttachments(new Messaging.EmailFileAttachment[] { attach }); 
       Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
         return 'success';
