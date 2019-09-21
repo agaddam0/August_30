@@ -179,6 +179,7 @@
     <members>TC_DevopsPortal Profile</members>
     <members>TEK Community Profile</members>
     <members>Trailhead Tracker Profile</members>
+    <members>TEK_SFDevOps_Assessment_Wizard Profile</members>
     <name>Profile</name>
   </types>
   <types>

@@ -7,11 +7,17 @@ public class TC_DevopsQuestionController
     
     public List<response__c> resdetails{get;set;}
     Public list<response__c> BLlist1 {get;set;}
+    Public list<response__c> BLlist11 {get;set;}
     Public list<response__c> BLlist2 {get;set;}
+    Public list<response__c> BLlist22 {get;set;}
     Public list<response__c> BLlist3 {get;set;}
+    Public list<response__c> BLlist33 {get;set;}
     Public list<response__c> BLlist4 {get;set;}
+    Public list<response__c> BLlist44 {get;set;}
     Public list<response__c> BLlist5 {get;set;}
+    Public list<response__c> BLlist55 {get;set;}
     Public list<response__c> BLlist6 {get;set;}
+    Public list<response__c> BLlist66 {get;set;}
     Public Integer BLlistCount {get;set;}
     Public string contextu {get;set;}
     Public Integer cultureCount {get;set;}
@@ -129,39 +135,63 @@ public class TC_DevopsQuestionController
         ProcessCount = 5;
         }
         
-      resdetails = [select id,Name,Maturity_Level__c,ResponseQuestion__c,ResponseAnswer__c from Response__c where Survey__c =: survid]; 
+      resdetails = [select id,Name,Question_Type__c,Maturity_Level__c,ResponseQuestion__c,ResponseAnswer__c from Response__c where Survey__c =: survid]; 
         
         BLlist1 = new list<response__c>();
+        BLlist11 = new list<response__c>();
         BLlist2 = new list<response__c>();
+        BLlist22 = new list<response__c>();
          BLlist3 = new list<response__c>();
+        BLlist33 = new list<response__c>();
          BLlist4 = new list<response__c>();
+        BLlist44 = new list<response__c>();
          BLlist5 = new list<response__c>();
+        BLlist55 = new list<response__c>();
         BLlist6 = new list<response__c>();
+        BLlist66 = new list<response__c>();
         
         for(Response__c reds: resdetails){
-        if(reds.Maturity_Level__c=='Baseline')
+        if(reds.Maturity_Level__c=='Baseline' && reds.Question_Type__c == 'Big Questions')
         {
         BLlist1.add(reds);
         }
-        if(reds.Maturity_Level__c=='Beginning')
+        else if(reds.Maturity_Level__c=='Baseline' && reds.Question_Type__c == 'Non-Big Questions'){
+        BLlist11.add(reds);    
+        }
+        if(reds.Maturity_Level__c=='Beginning' && reds.Question_Type__c == 'Big Questions')
         {
         BLlist2.add(reds);
         }
-        if(reds.Maturity_Level__c=='Contextual')
+        else if(reds.Maturity_Level__c=='Beginning' && reds.Question_Type__c == 'Non-Big Questions'){
+        BLlist22.add(reds);    
+        }
+        if(reds.Maturity_Level__c=='Contextual' && reds.Question_Type__c == 'Big Questions')
         {
         BLlist3.add(reds);
         }
-        if(reds.Maturity_Level__c=='Elite')
+        else if(reds.Maturity_Level__c=='Contextual' && reds.Question_Type__c == 'Non-Big Questions'){
+        BLlist33.add(reds);    
+        }
+        if(reds.Maturity_Level__c=='Elite' && reds.Question_Type__c == 'Big Questions')
         {
         BLlist4.add(reds);
         }
-        if(reds.Maturity_Level__c=='Intermediate')
+        else if(reds.Maturity_Level__c=='Elite' && reds.Question_Type__c == 'Non-Big Questions'){
+        BLlist44.add(reds);    
+        }
+        if(reds.Maturity_Level__c=='Intermediate' && reds.Question_Type__c == 'Big Questions')
         {
         BLlist5.add(reds);
         }
-        if(reds.Maturity_Level__c=='Mature')
+        else if(reds.Maturity_Level__c=='Intermediate' && reds.Question_Type__c == 'Non-Big Questions'){
+        BLlist55.add(reds);    
+        }
+        if(reds.Maturity_Level__c=='Mature' && reds.Question_Type__c == 'Big Questions')
         {
         BLlist6.add(reds);
+        }
+        else if(reds.Maturity_Level__c=='Mature' && reds.Question_Type__c == 'Non-Big Questions'){
+        BLlist66.add(reds);    
         }
         
         }
@@ -689,7 +719,7 @@ public class TC_DevopsQuestionController
       Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
       mail.setUseSignature(false);
       mail.setToAddresses(new String[] { emailid });
-      mail.setSubject('Devops survey report details');
+      mail.setSubject('Results of your Salesforce BusDevOps self-assessment are attached');
       mail.setHtmlBody('');
       mail.setFileAttachments(new Messaging.EmailFileAttachment[] { attach }); 
       Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });

@@ -1,119 +1,119 @@
 <apex:page controller="TC_DevopsQuestionController" applyBodyTag="false" setup="false" sidebar="false" showHeader="false" renderAs="pdf">
     <head>
-              <!--  <style type="text/css" media="print">
-                    @page {
-                    	padding: 3cm 3cm 2cm 3cm;
-                        @top-center {
-                   			content: element(header);
-                    		
-                        }
-                        @bottom-left {
-                        	content: element(footer);
-                        }
-                    }
-                        div.header {
-                        padding: 10px;
-                        position: running(header);
-                        }
-                        div.footer {
-                        display: block;
-                        padding: 10px;
-                        position: running(footer);
-                        }
-                        .pagenumber:before {
-                        content: counter(page);
-                        }
-                        .pagecount:before {
-                        content: counter(pages);
-                        }
-                    
-                    
-                    </style>-->
+        <!--  <style type="text/css" media="print">
+@page {
+padding: 3cm 3cm 2cm 3cm;
+@top-center {
+content: element(header);
+
+}
+@bottom-left {
+content: element(footer);
+}
+}
+div.header {
+padding: 10px;
+position: running(header);
+}
+div.footer {
+display: block;
+padding: 10px;
+position: running(footer);
+}
+.pagenumber:before {
+content: counter(page);
+}
+.pagecount:before {
+content: counter(pages);
+}
+
+
+</style>-->
         
         <style type="text/css" media="print">
-                                 
+            
             @page {
-           margin-top: 4cm;
+            margin-top: 4cm;
             margin-bottom: 3cm;
-
-
+            
+            
             @top-center {
-                content: element(header);
+            content: element(header);
             }
             @bottom-left {
-                content: element(footer);
+            content: element(footer);
             }
-        }
-
-        div.header {
+            }
+            
+            div.header {
             padding: 10px;
             position: running(header);
-        }
-        div.footer {
+            }
+            div.footer {
             display: block;
             padding: 5px;
             position: running(footer);
-        }
-        .pagenumber:before {
+            }
+            .pagenumber:before {
             content: counter(page);
-        }
-        .pagecount:before {
+            }
+            .pagecount:before {
             content: counter(pages);
-        }
-        div.content {
+            }
+            div.content {
             float: left;
             width: 100%;
-        }     
-                    </style>
-              </head>
+            }     
+        </style>
+    </head>
     <div class="header">
-    	<img style = "height:70px;width:705px;" src="{!$Resource.TC_devopsfullheader}"/>
+        <img style = "height:70px;width:705px;" src="{!$Resource.TC_devopsfullheader}"/>
     </div>
-        <div class="footer">
-      <img style = "height:100px;width:705px;" src="{!$Resource.TC_devopsfullfooter}"/>   
+    <div class="footer">
+        <img style = "height:100px;width:705px;" src="{!$Resource.TC_devopsfullfooter}"/>   
     </div> 
-        <div class="content">
-            <apex:form >
-                <apex:pageBlock >
-                    <table class="table1" style="border: 1px solid black;width:100%;">
-                        <tr>
-                            <th class="th1" style="border: 1px solid black;text-align: center;" colspan = "4">Contact Details</th>
-                        </tr>
-                        <tr>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">Name</td> 
-                            <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.name}</td>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">Email</td>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.Email}</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">Company</td> 
-                            <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.company}</td>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">Phone</td>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.phone}</td>
-                            
-                        </tr>
-                        <tr>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">City</td> 
-                            <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.city}</td>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">Survey Date-Time</td>
-                            <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.createddate}</td>
-                            
-                        </tr>
-                        <tr>
-                            <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "6">Over All Maturity : {!surrec.Over_all_Maturity_Level__c}</th>
-                            
-                            
-                        </tr>
-                    </table>
-                    <br/>
-                    <br/>
-                    <div>
+    <div class="content">
+        <apex:form >
+            <apex:pageBlock >
+                <table class="table1" style="border: 1px solid black;width:100%;">
+                    <tr>
+                        <th class="th1" style="border: 1px solid black;text-align: center;" colspan = "4">Respondent</th>
+                    </tr>
+                    <tr>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">Name</td> 
+                        <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.name}</td>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">Email</td>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.Email}</td>
                         
+                    </tr>
+                    <tr>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">Company</td> 
+                        <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.company}</td>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">Phone</td>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.phone}</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">City</td> 
+                        <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.city}</td>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">Survey Date-Time</td>
+                        <td class="th1" style = "width:25%;border: 1px solid black;">{!surrec.Lead_Name__r.createddate}</td>
+                        
+                    </tr>
+                    <tr>
+                        <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "6">Over All Maturity {!surrec.Over_all_Maturity_Level__c}</th>
+                        
+                        
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <div>
+                    
                     
                     <table class="table1" style="border: 1px solid black;width:100%;">
                         <tr>
-                            <th class="th1" style = "text-align: center;border: 1px solid black;" colspan = "6">Maturity Level stand against each vector</th>
+                            <th class="th1" style = "text-align: center;border: 1px solid black;" colspan = "6">Tactical Maturity Level per Impact Vector</th>
                         </tr>
                         <tr>
                             <th class="th1" style="border: 1px solid black;">Level 5: <br/>Predictable Continuous Delivery with 1 or more <br/> releases/day with IT deploying and Business releasing.<br/><br/></th>
@@ -270,7 +270,7 @@
                             
                         </tr>
                         <tr>
-                            <th class="th1" style = "text-align: center;border: 1px solid black;">VECTORS -></th>
+                            <th class="th1" style = "text-align: right;border: 1px solid black;">Impact Vectors-></th>
                             <td class="th1" style="font-size: 11px;border: 1px solid black;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CULTURE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
                             <td class="th1" style="font-size: 11px;border: 1px solid black;">MEASUREMENT</td>
                             <td class="th1" style="font-size: 11px;border: 1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;TECHNICAL&nbsp;&nbsp;&nbsp;&nbsp;</td> 
@@ -279,109 +279,188 @@
                             
                         </tr>
                     </table>
-                    </div>
+                </div>
+                
+                <br/>
+                <br/>                  
+                
+                
+                <table style="margin-top: 30px;">
+                    <tr>
+                        <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "7">Maturity Level Questions and Responses</th>
+                    </tr>
+                    <tr>
+                        <th class="th1" style="border: 1px solid black;" colspan = "1">Maturity Level-Group</th>
+                        <th class="th1" style="border: 1px solid black;" colspan = "5">Question</th> 
+                        <th class="th1" style="border: 1px solid black;;" colspan = "1">Answer</th>
+                    </tr>
                     
-                    <br/>
-                    <br/>
-                    <table style="margin-top: 30px;">
+                    <apex:repeat var="resde" value="{!BLlist1}">
                         <tr>
-                            <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "7">Questions and Responses</th>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
                         </tr>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist2}">
                         <tr>
-                            <th class="th1" style="border: 1px solid black;" colspan = "1">Maturity Level-Group</th>
-                            <th class="th1" style="border: 1px solid black;" colspan = "5">Question</th> 
-                            <th class="th1" style="border: 1px solid black;;" colspan = "1">Answer</th>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
                         </tr>
-                        
-                        <apex:repeat var="resde" value="{!BLlist1}">
-                            <tr>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "5">
-                                    <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
-                                </td>
-                            </tr>
-                        </apex:repeat>
-                        <apex:repeat var="resde" value="{!BLlist2}">
-                            <tr>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "5">
-                                    <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
-                                </td>
-                            </tr>
-                        </apex:repeat>
-                        <apex:repeat var="resde" value="{!BLlist3}">
-                            <tr>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "5">
-                                    <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
-                                </td>
-                            </tr>
-                        </apex:repeat>
-                        <apex:repeat var="resde" value="{!BLlist4}">
-                            <tr>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "5">
-                                    <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
-                                </td>
-                            </tr>
-                        </apex:repeat>
-                        <apex:repeat var="resde" value="{!BLlist5}">
-                            <tr>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "5">
-                                    <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
-                                </td>
-                            </tr>
-                        </apex:repeat>
-                        <apex:repeat var="resde" value="{!BLlist6}">
-                            <tr>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "5">
-                                    <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
-                                </td>
-                                <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                    <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
-                                </td>
-                            </tr>
-                        </apex:repeat>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist3}">
                         <tr>
-                            <th class="th1" style = "text-align: center;border: 1px solid black;" colspan = "7">To schedule a conversation at Dreamforce about these results, send an email to <a>chavens@teksystems.com</a>                             
-                            </th>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
                         </tr>
-                        
-                    </table>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist4}">
+                        <tr>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist5}">
+                        <tr>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist6}">
+                        <tr>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </table>
+                
+                
+                <table style="margin-top: 30px;">
+                    <tr>
+                        <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "7">Context Setting Questions and Responses</th>
+                    </tr>
+                    <tr>
+                        <th class="th1" style="border: 1px solid black;" colspan = "6">Question</th> 
+                        <th class="th1" style="border: 1px solid black;;" colspan = "1">Answer</th>
+                    </tr>
                     
-                </apex:pageBlock>
-            </apex:form>
-            </div>
-        
-        
-
+                    <apex:repeat var="resde" value="{!BLlist11}">
+                        <tr>
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist22}">
+                        <tr>
+                            
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist33}">
+                        <tr>
+                            
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist44}">
+                        <tr>
+                            
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist55}">
+                        <tr>
+                            
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <apex:repeat var="resde" value="{!BLlist66}">
+                        <tr>
+                            
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                                <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.ResponseAnswer__c }"></apex:outputText><br/>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <tr>
+                        <th class="th1" style = "text-align: center;border: 1px solid black;" colspan = "7">To schedule a conversation at Dreamforce about these results, send an email to <a>chavens@teksystems.com</a>                             
+                        </th>
+                    </tr>
+                    
+                </table>
+                
+            </apex:pageBlock>
+        </apex:form>
+    </div>
+    
+    
+    
 </apex:page>

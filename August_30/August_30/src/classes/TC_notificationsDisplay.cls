@@ -6,7 +6,7 @@ public class TC_notificationsDisplay {
         
         List<NotWrapper> notwl=new List<NotWrapper>();
         
-       for( TC_Notifications__C noti : [select Content__c ,Publish_Date__c,Header_Description__c from TC_Notifications__C where Dedicated_To__c=:userinfo.getUserId()]) 
+       for( TC_Notifications__C noti : [select Content__c ,Publish_Date__c,Header_Description__c from TC_Notifications__C where Dedicated_To__c=:userinfo.getUserId() order by Header_Description__c desc]) 
        
        {
            
