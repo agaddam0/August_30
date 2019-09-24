@@ -293,7 +293,7 @@ public class TC_DevopsQuestionController
         wrap.EmailId = survy2.Lead_Name__r.Email;
         TC_DevopsQuestion__mdt devquestion2 =new TC_DevopsQuestion__mdt();
         
-        
+        system.debug('submitoutput'+output);
         devquestion2 = [select Maturity_Level__c,Vector1__c,Vector2__c,Question_Type__c from TC_DevopsQuestion__mdt 
                         where Question__c =: output ];
         system.debug('test111'+devquestion2);
@@ -322,6 +322,7 @@ public class TC_DevopsQuestionController
         
         
         if(res[0].Name == 'Q-0053'){
+            system.debug('@@@@Question@@@'+res[0].Name);
             List<Response__c> response=[select id,Name,Survey__c,Survey__r.Over_all_Maturity_Level__c,ResponseQuestion__c,ResponseAnswer__c from Response__c where Name IN ('Q-0050','Q-0051','Q-0052','Q-0053') and Survey__c =: recordId];
             Decimal qus50ans = 0.0;
             Decimal qus51ans = 0.0;
@@ -329,14 +330,14 @@ public class TC_DevopsQuestionController
             Decimal qus53ans = 0.0;
             
             system.debug(survy2.Lead_Name__r.Email);
-            
+            system.debug('@@@@!!!response@@@@'+response);
             for(Response__c  re:response){
                 system.debug('response@@@'+re.Name);    
                 //Q-0050
                 if(re.Name=='Q-0050'){
                     system.debug('enter50');
                     if(re.ResponseAnswer__c=='Longer than 6 months'){
-                        system.debug('enter511');
+                        system.debug('enter500');
                         qus50ans = 0.0;    
                     }
                     else if( re.ResponseAnswer__c=='From 1 - 6 months'){

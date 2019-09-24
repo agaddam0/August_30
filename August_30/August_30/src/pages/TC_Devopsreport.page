@@ -290,17 +290,15 @@ content: counter(pages);
                         <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "7">Maturity Level Questions and Responses</th>
                     </tr>
                     <tr>
-                        <th class="th1" style="border: 1px solid black;" colspan = "1">Maturity Level-Group</th>
-                        <th class="th1" style="border: 1px solid black;" colspan = "5">Question</th> 
+                      
+                        <th class="th1" style="border: 1px solid black;" colspan = "6">Question</th> 
                         <th class="th1" style="border: 1px solid black;;" colspan = "1">Answer</th>
                     </tr>
                     
                     <apex:repeat var="resde" value="{!BLlist1}">
                         <tr>
-                            <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                            </td>
-                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                  
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -310,10 +308,8 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist2}">
                         <tr>
-                            <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                            </td>
-                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                            
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -323,10 +319,8 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist3}">
                         <tr>
-                            <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                            </td>
-                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                           
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -336,10 +330,8 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist4}">
                         <tr>
-                            <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                            </td>
-                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                           
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -349,10 +341,8 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist5}">
                         <tr>
-                            <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                            </td>
-                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                            
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -362,10 +352,8 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist6}">
                         <tr>
-                            <td class="th1" style="border: 1px solid black;" colspan = "1">
-                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
-                            </td>
-                            <td class="th1" style="border: 1px solid black;" colspan = "5">
+                            
+                            <td class="th1" style="border: 1px solid black;" colspan = "6">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -381,13 +369,17 @@ content: counter(pages);
                         <th class="th1" style="text-align: center;border: 1px solid black;" colspan = "7">Context Setting Questions and Responses</th>
                     </tr>
                     <tr>
-                        <th class="th1" style="border: 1px solid black;" colspan = "6">Question</th> 
+                          <th class="th1" style="border: 1px solid black;" colspan = "1">Maturity Level-Group</th>
+                        <th class="th1" style="border: 1px solid black;" colspan = "5">Question</th> 
                         <th class="th1" style="border: 1px solid black;;" colspan = "1">Answer</th>
                     </tr>
                     
                     <apex:repeat var="resde" value="{!BLlist11}">
                         <tr>
-                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -397,8 +389,10 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist22}">
                         <tr>
-                            
-                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -408,8 +402,10 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist33}">
                         <tr>
-                            
-                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -419,8 +415,10 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist44}">
                         <tr>
-                            
-                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -430,8 +428,10 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist55}">
                         <tr>
-                            
-                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
@@ -441,8 +441,10 @@ content: counter(pages);
                     </apex:repeat>
                     <apex:repeat var="resde" value="{!BLlist66}">
                         <tr>
-                            
-                            <td class="th1" style="border: 1px solid black;" colspan = "6">
+                            <td class="th1" style="border: 1px solid black;" colspan = "1">
+                                <apex:outputText value="{!resde.Maturity_Level__c}"></apex:outputText><br/>
+                            </td>
+                            <td class="th1" style="border: 1px solid black;" colspan = "5">
                                 <apex:outputText value="{!resde.ResponseQuestion__c}"></apex:outputText><br/>
                             </td>
                             <td class="th1" style="border: 1px solid black;" colspan = "1">
