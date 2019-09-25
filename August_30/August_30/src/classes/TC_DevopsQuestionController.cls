@@ -25,179 +25,179 @@ public class TC_DevopsQuestionController
     Public Integer TechnicalCount {get;set;}
     Public Integer ProcessCount {get;set;}
     
-       
-    public TC_DevopsQuestionController(){
     
+   public TC_DevopsQuestionController(){
+        
         id survid = ApexPages.currentPage().getParameters().get('surid');
         system.debug('survid @@@'+survid);
         surrec = [select id, name,Culture__c,Measurement__c,Technical__c,Process__c,Over_all_Maturity_Level__c,Lead_Name__r.name,Lead_Name__r.Email,Lead_Name__r.company,Lead_Name__r.phone,Lead_Name__r.city,Lead_Name__r.createddate   from survey__c where id =: survid];
-		system.debug('surrec@@@'+surrec.Lead_Name__r.city);
+        system.debug('surrec@@@'+surrec.Lead_Name__r.city);
         //for culture
         if(surrec.Culture__c=='Baseline')
         {
-        cultureCount = 0;
+            cultureCount = 0;
         }
         else if(surrec.Culture__c=='Beginning')
         {
-        cultureCount = 1;
+            cultureCount = 1;
         }
         else if(surrec.Culture__c=='Intermediate')
         {
-        cultureCount = 2;
+            cultureCount = 2;
         }
         else if(surrec.Culture__c=='Mature')
         {
-        cultureCount = 3;
+            cultureCount = 3;
         }
         else if(surrec.Culture__c=='Elite')
         {
-        cultureCount = 4;
+            cultureCount = 4;
         }
         else
         {
-        cultureCount = 5;
+            cultureCount = 5;
         }
         
-		//for measurement        
+        //for measurement        
         if(surrec.Measurement__c=='Baseline')
         {
-        MeasurementCount = 0;
+            MeasurementCount = 0;
         }
         else if(surrec.Measurement__c=='Beginning')
         {
-        MeasurementCount = 1;
+            MeasurementCount = 1;
         }
         else if(surrec.Measurement__c=='Intermediate')
         {
-        MeasurementCount = 2;
+            MeasurementCount = 2;
         }
         else if(surrec.Measurement__c=='Mature')
         {
-        MeasurementCount = 3;
+            MeasurementCount = 3;
         }
         else if(surrec.Measurement__c=='Elite')
         {
-        MeasurementCount = 4;
+            MeasurementCount = 4;
         }
         else
         {
-        MeasurementCount = 5;
+            MeasurementCount = 5;
         }
         
         //for technical
         if(surrec.Technical__c=='Baseline')
         {
-        TechnicalCount = 0;
+            TechnicalCount = 0;
         }
         else if(surrec.Technical__c=='Beginning')
         {
-        TechnicalCount = 1;
+            TechnicalCount = 1;
         }
         else if(surrec.Technical__c=='Intermediate')
         {
-        TechnicalCount = 2;
+            TechnicalCount = 2;
         }
         else if(surrec.Technical__c=='Mature')
         {
-        TechnicalCount = 3;
+            TechnicalCount = 3;
         }
         else if(surrec.Technical__c=='Elite')
         {
-        TechnicalCount = 4;
+            TechnicalCount = 4;
         }
         else
         {
-        TechnicalCount = 5;
+            TechnicalCount = 5;
         }
         //for process
         if(surrec.Process__c=='Baseline')
         {
-        ProcessCount = 0;
+            ProcessCount = 0;
         }
         else if(surrec.Process__c=='Beginning')
         {
-        ProcessCount = 1;
+            ProcessCount = 1;
         }
         else if(surrec.Process__c=='Intermediate')
         {
-        ProcessCount = 2;
+            ProcessCount = 2;
         }
         else if(surrec.Process__c=='Mature')
         {
-        ProcessCount = 3;
+            ProcessCount = 3;
         }
         else if(surrec.Process__c=='Elite')
         {
-        ProcessCount = 4;
+            ProcessCount = 4;
         }
         else
         {
-        ProcessCount = 5;
+            ProcessCount = 5;
         }
         
-      resdetails = [select id,Name,Question_Type__c,Maturity_Level__c,ResponseQuestion__c,ResponseAnswer__c from Response__c where Survey__c =: survid]; 
+        resdetails = [select id,Name,Question_Type__c,Maturity_Level__c,ResponseQuestion__c,ResponseAnswer__c from Response__c where Survey__c =: survid]; 
         
         BLlist1 = new list<response__c>();
         BLlist11 = new list<response__c>();
         BLlist2 = new list<response__c>();
         BLlist22 = new list<response__c>();
-         BLlist3 = new list<response__c>();
+        BLlist3 = new list<response__c>();
         BLlist33 = new list<response__c>();
-         BLlist4 = new list<response__c>();
+        BLlist4 = new list<response__c>();
         BLlist44 = new list<response__c>();
-         BLlist5 = new list<response__c>();
+        BLlist5 = new list<response__c>();
         BLlist55 = new list<response__c>();
         BLlist6 = new list<response__c>();
         BLlist66 = new list<response__c>();
         
         for(Response__c reds: resdetails){
-        if(reds.Maturity_Level__c=='Baseline' && reds.Question_Type__c == 'Big Questions')
-        {
-        BLlist1.add(reds);
-        }
-        else if(reds.Maturity_Level__c=='Baseline' && reds.Question_Type__c == 'Non-Big Questions'){
-        BLlist11.add(reds);    
-        }
-        if(reds.Maturity_Level__c=='Beginning' && reds.Question_Type__c == 'Big Questions')
-        {
-        BLlist2.add(reds);
-        }
-        else if(reds.Maturity_Level__c=='Beginning' && reds.Question_Type__c == 'Non-Big Questions'){
-        BLlist22.add(reds);    
-        }
-        if(reds.Maturity_Level__c=='Contextual' && reds.Question_Type__c == 'Big Questions')
-        {
-        BLlist3.add(reds);
-        }
-        else if(reds.Maturity_Level__c=='Contextual' && reds.Question_Type__c == 'Non-Big Questions'){
-        BLlist33.add(reds);    
-        }
-        if(reds.Maturity_Level__c=='Elite' && reds.Question_Type__c == 'Big Questions')
-        {
-        BLlist4.add(reds);
-        }
-        else if(reds.Maturity_Level__c=='Elite' && reds.Question_Type__c == 'Non-Big Questions'){
-        BLlist44.add(reds);    
-        }
-        if(reds.Maturity_Level__c=='Intermediate' && reds.Question_Type__c == 'Big Questions')
-        {
-        BLlist5.add(reds);
-        }
-        else if(reds.Maturity_Level__c=='Intermediate' && reds.Question_Type__c == 'Non-Big Questions'){
-        BLlist55.add(reds);    
-        }
-        if(reds.Maturity_Level__c=='Mature' && reds.Question_Type__c == 'Big Questions')
-        {
-        BLlist6.add(reds);
-        }
-        else if(reds.Maturity_Level__c=='Mature' && reds.Question_Type__c == 'Non-Big Questions'){
-        BLlist66.add(reds);    
-        }
-        
+            if(reds.Maturity_Level__c=='Baseline' && reds.Question_Type__c == 'Big Questions')
+            {
+                BLlist1.add(reds);
+            }
+            else if(reds.Maturity_Level__c=='Baseline' && reds.Question_Type__c == 'Non-Big Questions'){
+                BLlist11.add(reds);    
+            }
+            if(reds.Maturity_Level__c=='Beginning' && reds.Question_Type__c == 'Big Questions')
+            {
+                BLlist2.add(reds);
+            }
+            else if(reds.Maturity_Level__c=='Beginning' && reds.Question_Type__c == 'Non-Big Questions'){
+                BLlist22.add(reds);    
+            }
+            if(reds.Maturity_Level__c=='Contextual' && reds.Question_Type__c == 'Big Questions')
+            {
+                BLlist3.add(reds);
+            }
+            else if(reds.Maturity_Level__c=='Contextual' && reds.Question_Type__c == 'Non-Big Questions'){
+                BLlist33.add(reds);    
+            }
+            if(reds.Maturity_Level__c=='Elite' && reds.Question_Type__c == 'Big Questions')
+            {
+                BLlist4.add(reds);
+            }
+            else if(reds.Maturity_Level__c=='Elite' && reds.Question_Type__c == 'Non-Big Questions'){
+                BLlist44.add(reds);    
+            }
+            if(reds.Maturity_Level__c=='Intermediate' && reds.Question_Type__c == 'Big Questions')
+            {
+                BLlist5.add(reds);
+            }
+            else if(reds.Maturity_Level__c=='Intermediate' && reds.Question_Type__c == 'Non-Big Questions'){
+                BLlist55.add(reds);    
+            }
+            if(reds.Maturity_Level__c=='Mature' && reds.Question_Type__c == 'Big Questions')
+            {
+                BLlist6.add(reds);
+            }
+            else if(reds.Maturity_Level__c=='Mature' && reds.Question_Type__c == 'Non-Big Questions'){
+                BLlist66.add(reds);    
+            }
+            
         }
         BLlistCount = BLlist1.size();
-       // system.debug('BLlist@@'+BLlist1.size());
-      }   
+        // system.debug('BLlist@@'+BLlist1.size());
+    }  
     
     @AuraEnabled
     public static Devops_Question__c getpicklist()
@@ -288,12 +288,12 @@ public class TC_DevopsQuestionController
         string vec2;
         string overallMaturityLevel;
         string quesType;
-       
+        
         Wrapper wrap = new Wrapper();
         wrap.EmailId = survy2.Lead_Name__r.Email;
         TC_DevopsQuestion__mdt devquestion2 =new TC_DevopsQuestion__mdt();
         
-        system.debug('submitoutput'+output);
+        
         devquestion2 = [select Maturity_Level__c,Vector1__c,Vector2__c,Question_Type__c from TC_DevopsQuestion__mdt 
                         where Question__c =: output ];
         system.debug('test111'+devquestion2);
@@ -321,118 +321,119 @@ public class TC_DevopsQuestionController
         insert res;    
         
         
-        if(res[0].Name == 'Q-0053'){
-            system.debug('@@@@Question@@@'+res[0].Name);
-            List<Response__c> response=[select id,Name,Survey__c,Survey__r.Over_all_Maturity_Level__c,ResponseQuestion__c,ResponseAnswer__c from Response__c where Name IN ('Q-0050','Q-0051','Q-0052','Q-0053') and Survey__c =: recordId];
-            Decimal qus50ans = 0.0;
-            Decimal qus51ans = 0.0;
-            Decimal qus52ans = 0.0;
-            Decimal qus53ans = 0.0;
-            
-            system.debug(survy2.Lead_Name__r.Email);
-            system.debug('@@@@!!!response@@@@'+response);
-            for(Response__c  re:response){
-                system.debug('response@@@'+re.Name);    
-                //Q-0050
-                if(re.Name=='Q-0050'){
-                    system.debug('enter50');
-                    if(re.ResponseAnswer__c=='Longer than 6 months'){
-                        system.debug('enter500');
-                        qus50ans = 0.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 1 - 6 months'){
-                        qus50ans = 1.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 7 - 30 days'){
-                        qus50ans = 2.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 1 - 7 days'){
-                        qus50ans = 3.0;    
-                    }
-                    else{
-                        qus50ans = 4.0;    
-                    }
+        
+        system.debug('@@@@Question@@@'+res[0].Name);
+        List<Response__c> response=[select id,Name,Survey__c,Survey__r.Over_all_Maturity_Level__c,ResponseQuestion__c,ResponseAnswer__c from Response__c where (Question_Type__c='Big Questions' and Survey__c =: recordId)];
+        system.debug('@@@@!!!response@@@@'+response);
+        Decimal qus50ans = 0.0;
+        Decimal qus51ans = 0.0;
+        Decimal qus52ans = 0.0;
+        Decimal qus53ans = 0.0;
+        
+        system.debug(survy2.Lead_Name__r.Email);
+        
+        for(Response__c  re:response){
+            system.debug('response@@@'+re.Name);    
+            //Q-0050
+            if(re.Name=='Q-0050'){
+                system.debug('enter50');
+                if(re.ResponseAnswer__c=='Longer than 6 months'){
+                    system.debug('enter500');
+                    qus50ans = 0.0;    
                 }
-                
-                //Q-0051
-                if(re.Name=='Q-0051'){
-                    system.debug('enter51');
-                    if(re.ResponseAnswer__c=='Longer than 6 months'){
-                        system.debug('enter511');
-                        qus51ans = 0.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 1 - 6 months'){
-                        qus51ans = 1.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 7 - 30 days'){
-                        qus51ans = 2.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 1 - 7 days'){
-                        qus51ans = 3.0;    
-                    }
-                    else{
-                        qus51ans = 4.0;    
-                    }
+                else if( re.ResponseAnswer__c=='From 1 - 6 months'){
+                    qus50ans = 1.0;    
                 }
-                //Q-0052
-                if(re.Name=='Q-0052'){
-                    system.debug('enter52');
-                    if(re.ResponseAnswer__c=='Longer than 6 months'){
-                        system.debug('enter522');
-                        qus52ans = 0.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 1 - 6 months'){
-                        qus52ans = 1.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 7 - 30 days'){
-                    qus53ans = 2.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='From 1 - 7 days'){
-                        qus52ans = 3.0;    
-                    }
-                    else{
-                        qus52ans = 4.0;    
-                    }
+                else if( re.ResponseAnswer__c=='From 7 - 30 days'){
+                    qus50ans = 2.0;    
                 }
-                //Q-0053
-                if(re.Name=='Q-0053'){
-                    if(re.ResponseAnswer__c=='Greater than 60%'){
-                        qus53ans = 0.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='46 - 60%'){
-                        qus53ans = 1.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='31 - 45%'){
-                    qus53ans = 2.0;    
-                    }
-                    else if( re.ResponseAnswer__c=='16 - 30%'){
-                    qus53ans = 3.0;    
-                    }
-                    else{
-                        qus53ans = 4.0;    
-                    }
-                }             
-                system.debug('qus50ans@@@'+qus50ans);
-                system.debug('qus51ans@@@'+qus51ans);
-                system.debug('qus52ans@@@'+qus52ans);
-                system.debug('qus53ans@@@'+qus53ans);
-                Decimal initialMaturity = (qus50ans + qus51ans + qus52ans + qus53ans)/4;
-                
-                
-                Decimal finalMaturity = initialMaturity.round(System.roundingMode.CEILING);
-                system.debug('finalMaturity@@@'+finalMaturity);
-                survy2.Over_all_Maturity_Level__c = 'Level-'+string.valueOf(finalMaturity);
-                overallMaturityLevel=survy2.Over_all_Maturity_Level__c;
-                wrap.maturity=overallMaturityLevel;
-                
+                else if( re.ResponseAnswer__c=='From 1 - 7 days'){
+                    qus50ans = 3.0;    
+                }
+                else{
+                    qus50ans = 4.0;    
+                }
             }
             
+            //Q-0051
+            if(re.Name=='Q-0051'){
+                system.debug('enter51');
+                if(re.ResponseAnswer__c=='Longer than 6 months'){
+                    system.debug('enter511');
+                    qus51ans = 0.0;    
+                }
+                else if( re.ResponseAnswer__c=='From 1 - 6 months'){
+                    qus51ans = 1.0;    
+                }
+                else if( re.ResponseAnswer__c=='From 7 - 30 days'){
+                    qus51ans = 2.0;    
+                }
+                else if( re.ResponseAnswer__c=='From 1 - 7 days'){
+                    qus51ans = 3.0;    
+                }
+                else{
+                    qus51ans = 4.0;    
+                }
+            }
+            //Q-0052
+            if(re.Name=='Q-0052'){
+                system.debug('enter52');
+                if(re.ResponseAnswer__c=='Longer than 6 months'){
+                    system.debug('enter522');
+                    qus52ans = 0.0;    
+                }
+                else if( re.ResponseAnswer__c=='From 1 - 6 months'){
+                    qus52ans = 1.0;    
+                }
+                else if( re.ResponseAnswer__c=='From 7 - 30 days'){
+                    qus53ans = 2.0;    
+                }
+                else if( re.ResponseAnswer__c=='From 1 - 7 days'){
+                    qus52ans = 3.0;    
+                }
+                else{
+                    qus52ans = 4.0;    
+                }
+            }
+            //Q-0053
+            if(re.Name=='Q-0053'){
+                if(re.ResponseAnswer__c=='Greater than 60%'){
+                    qus53ans = 0.0;    
+                }
+                else if( re.ResponseAnswer__c=='46 - 60%'){
+                    qus53ans = 1.0;    
+                }
+                else if( re.ResponseAnswer__c=='31 - 45%'){
+                    qus53ans = 2.0;    
+                }
+                else if( re.ResponseAnswer__c=='16 - 30%'){
+                    qus53ans = 3.0;    
+                }
+                else{
+                    qus53ans = 4.0;    
+                }
+            }             
+            system.debug('qus50ans@@@'+qus50ans);
+            system.debug('qus51ans@@@'+qus51ans);
+            system.debug('qus52ans@@@'+qus52ans);
+            system.debug('qus53ans@@@'+qus53ans);
+            Decimal initialMaturity = (qus50ans + qus51ans + qus52ans + qus53ans)/4;
             
-          
             
-            //update survy2;
+            Decimal finalMaturity = initialMaturity.round(System.roundingMode.CEILING);
+            system.debug('finalMaturity@@@'+finalMaturity);
+            survy2.Over_all_Maturity_Level__c = 'Level-'+string.valueOf(finalMaturity);
+            overallMaturityLevel=survy2.Over_all_Maturity_Level__c;
+            wrap.maturity=overallMaturityLevel;
             
         }
+        
+        
+        
+        
+        //update survy2;
+        
+        
         
         
         //for maturity analysis
@@ -444,31 +445,31 @@ public class TC_DevopsQuestionController
         integer s5 = 0;
         integer s6 = 0;
         //for 1.Technical  
-       
+        
         List<Response__c> maturityList = [select Maturity_Level__c,Vector1__c,Vector2__c from Response__c where Survey__c =:recordId];
         List<Response__c> TmaturityList =  new  List<Response__c>();
         List<Response__c> PmaturityList =  new  List<Response__c>();
         List<Response__c> MmaturityList =  new  List<Response__c>();
         List<Response__c> CmaturityList =  new  List<Response__c>();
- 
-         for(Response__c r : maturityList){
-             if(r.Vector1__c =='Technical' || r.Vector2__c =='Technical'){
-              TmaturityList.add(r);   
-             }
-             if(r.Vector1__c =='Process' || r.Vector2__c =='Process'){
-             PmaturityList.add(r);
-             }
-             if(r.Vector1__c =='Measurement' || r.Vector2__c =='Measurement'){
-             MmaturityList.add(r);
-             }
-             if(r.Vector1__c =='Culture' || r.Vector2__c =='Culture'){
-             CmaturityList.add(r);
-             }
-         }
+        
+        for(Response__c r : maturityList){
+            if(r.Vector1__c =='Technical' || r.Vector2__c =='Technical'){
+                TmaturityList.add(r);   
+            }
+            if(r.Vector1__c =='Process' || r.Vector2__c =='Process'){
+                PmaturityList.add(r);
+            }
+            if(r.Vector1__c =='Measurement' || r.Vector2__c =='Measurement'){
+                MmaturityList.add(r);
+            }
+            if(r.Vector1__c =='Culture' || r.Vector2__c =='Culture'){
+                CmaturityList.add(r);
+            }
+        }
         
         
         
-    /*    List<Response__c> maturityList = [select Maturity_Level__c,Vector1__c,Vector2__c from Response__c where Survey__c =:recordId AND (Vector1__c='Technical' OR Vector2__c='Technical') ];*/
+        /*    List<Response__c> maturityList = [select Maturity_Level__c,Vector1__c,Vector2__c from Response__c where Survey__c =:recordId AND (Vector1__c='Technical' OR Vector2__c='Technical') ];*/
         system.debug('TmaturityList@@'+TmaturityList);
         for(Response__c r : TmaturityList){
             if(r.Maturity_Level__c == 'Contextual'){         
@@ -494,29 +495,29 @@ public class TC_DevopsQuestionController
         if(s6 > 0){
             survy2.Technical__c = 'Contextual';   
         }else{
-        if(s5 > 0){
-            survy2.Technical__c = 'Elite';   
-        }else{
-            if(s4 > 0){
-                survy2.Technical__c = 'Mature';
+            if(s5 > 0){
+                survy2.Technical__c = 'Elite';   
             }else{
-                if(s3 > 0){
-                    survy2.Technical__c = 'Intermediate';
+                if(s4 > 0){
+                    survy2.Technical__c = 'Mature';
                 }else{
-                    if(s2 > 0){
-                        survy2.Technical__c = 'Beginning';
+                    if(s3 > 0){
+                        survy2.Technical__c = 'Intermediate';
                     }else{
-                        if(s1 > 0){
-                            survy2.Technical__c = 'Baseline';
+                        if(s2 > 0){
+                            survy2.Technical__c = 'Beginning';
+                        }else{
+                            if(s1 > 0){
+                                survy2.Technical__c = 'Baseline';
+                            }
                         }
                     }
                 }
             }
         }
-        }
         
         //for 2.Process
-    
+        
         system.debug('PmaturityList@@'+PmaturityList);
         s1 = 0;
         s2 = 0;
@@ -543,34 +544,34 @@ public class TC_DevopsQuestionController
             if(r.Maturity_Level__c == 'Baseline'){              
                 s1++;
             }
-           
+            
         }
         if(s6 > 0){
             survy2.Process__c = 'Contextual';   
         }else{
-        if(s5 > 0){
-            survy2.Process__c = 'Elite';   
-        }else{
-            if(s4 > 0){
-                survy2.Process__c = 'Mature';
+            if(s5 > 0){
+                survy2.Process__c = 'Elite';   
             }else{
-                if(s3 > 0){
-                    survy2.Process__c = 'Intermediate';
+                if(s4 > 0){
+                    survy2.Process__c = 'Mature';
                 }else{
-                    if(s2 > 0){
-                        survy2.Process__c = 'Beginning';
+                    if(s3 > 0){
+                        survy2.Process__c = 'Intermediate';
                     }else{
-                        if(s1 > 0){
-                            survy2.Process__c = 'Baseline';
+                        if(s2 > 0){
+                            survy2.Process__c = 'Beginning';
+                        }else{
+                            if(s1 > 0){
+                                survy2.Process__c = 'Baseline';
+                            }
                         }
                     }
                 }
             }
         }
-        }
         
         //for Measurement
-    
+        
         system.debug('MmaturityList@@'+MmaturityList);
         s1 = 0;
         s2 = 0;
@@ -597,34 +598,34 @@ public class TC_DevopsQuestionController
             if(r.Maturity_Level__c == 'Baseline'){              
                 s1++;
             }
-                   }
+        }
         if(s6 > 0){
             survy2.Measurement__c = 'Contextual';   
         }else{
-        
-        if(s5 > 0){
-            survy2.Measurement__c = 'Elite';   
-        }else{
-            if(s4 > 0){
-                survy2.Measurement__c = 'Mature';
+            
+            if(s5 > 0){
+                survy2.Measurement__c = 'Elite';   
             }else{
-                if(s3 > 0){
-                    survy2.Measurement__c = 'Intermediate';
+                if(s4 > 0){
+                    survy2.Measurement__c = 'Mature';
                 }else{
-                    if(s2 > 0){
-                        survy2.Measurement__c = 'Beginning';
+                    if(s3 > 0){
+                        survy2.Measurement__c = 'Intermediate';
                     }else{
-                        if(s1 > 0){
-                            survy2.Measurement__c = 'Baseline';
-                        }                    }
+                        if(s2 > 0){
+                            survy2.Measurement__c = 'Beginning';
+                        }else{
+                            if(s1 > 0){
+                                survy2.Measurement__c = 'Baseline';
+                            }                    }
+                    }
                 }
             }
         }
-        }
-  
+        
         
         //for culture
-      //  List<Response__c> maturityList5 = [select Maturity_Level__c,Vector1__c,Vector2__c from Response__c where Survey__c =:recordId AND (Vector1__c='Culture' OR Vector2__c='Culture')];
+        //  List<Response__c> maturityList5 = [select Maturity_Level__c,Vector1__c,Vector2__c from Response__c where Survey__c =:recordId AND (Vector1__c='Culture' OR Vector2__c='Culture')];
         s1 = 0;
         s2 = 0;
         s3 = 0;
@@ -655,29 +656,29 @@ public class TC_DevopsQuestionController
         if(s6 > 0){
             survy2.Culture__c = 'Contextual';   
         }else{
-        if(s5 > 0){
-            survy2.Culture__c = 'Elite';   
-        }else{
-            if(s4 > 0){
-                survy2.Culture__c = 'Mature';
+            if(s5 > 0){
+                survy2.Culture__c = 'Elite';   
             }else{
-                if(s3 > 0){
-                    survy2.Culture__c = 'Intermediate';
+                if(s4 > 0){
+                    survy2.Culture__c = 'Mature';
                 }else{
-                    if(s2 > 0){
-                        survy2.Culture__c = 'Beginning';
+                    if(s3 > 0){
+                        survy2.Culture__c = 'Intermediate';
                     }else{
-                        if(s1 > 0){
-                            survy2.Culture__c = 'Baseline';
+                        if(s2 > 0){
+                            survy2.Culture__c = 'Beginning';
+                        }else{
+                            if(s1 > 0){
+                                survy2.Culture__c = 'Baseline';
+                            }
                         }
                     }
                 }
             }
         }
-        }
         
         survy2.Is_Survey_Completed__c = true;
-     
+        
         //end
         update survy2; 
         return wrap;   
@@ -702,14 +703,14 @@ public class TC_DevopsQuestionController
     @AuraEnabled
     public static string attachPDFInEmail(string surID, string emailid) {
         PageReference pgr = Page.TC_devopsreport;
-      pgr.getParameters().put('surid',surID);
-      Messaging.EmailFileAttachment attach = new Messaging.EmailFileAttachment();
-      attach.setContentType('application/pdf');
-      attach.setFileName('SurveyDetails.pdf');
-      attach.setInline(false);
-      Blob b = pgr.getContent();
-      //System.debug('>>>>>>>>>>' + b.toString());
-      attach.Body = b;
+        pgr.getParameters().put('surid',surID);
+        Messaging.EmailFileAttachment attach = new Messaging.EmailFileAttachment();
+        attach.setContentType('application/pdf');
+        attach.setFileName('SurveyDetails.pdf');
+        attach.setInline(false);
+        Blob b = pgr.getContent();
+        //System.debug('>>>>>>>>>>' + b.toString());
+        attach.Body = b;
         
         Attachment att = new Attachment();
         att.Name = 'SurveyForm';
@@ -717,13 +718,13 @@ public class TC_DevopsQuestionController
         att.body = b;
         insert att;
         
-      Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
-      mail.setUseSignature(false);
-      mail.setToAddresses(new String[] { emailid });
-      mail.setSubject('Results of your Salesforce BusDevOps self-assessment are attached');
-      mail.setHtmlBody('');
-      mail.setFileAttachments(new Messaging.EmailFileAttachment[] { attach }); 
-      Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
+        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+        mail.setUseSignature(false);
+        mail.setToAddresses(new String[] { emailid });
+        mail.setSubject('Results of your Salesforce BusDevOps self-assessment are attached');
+        mail.setHtmlBody('');
+        mail.setFileAttachments(new Messaging.EmailFileAttachment[] { attach }); 
+        Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
         return 'success';
     }
 }
