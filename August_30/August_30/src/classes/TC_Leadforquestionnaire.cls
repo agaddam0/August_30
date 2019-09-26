@@ -26,6 +26,7 @@ public with sharing class TC_Leadforquestionnaire {
             }
           
         }
+        system.debug('>>>>>>121231'+value);
       return value;
     }
 
@@ -38,8 +39,7 @@ public with sharing class TC_Leadforquestionnaire {
         surveyObj.Name = 'Record1';
         surveyObj.Lead_Name__c = leadId;      
          insert surveyObj;
-        //Survey__c sur = [Select Id from Survey__c where Lead_Name__c=:leadId];
-        return surveyObj.Id;
+              return surveyObj.Id;
         
     }
    
