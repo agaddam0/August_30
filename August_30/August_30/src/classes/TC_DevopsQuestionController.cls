@@ -341,13 +341,13 @@ public class TC_DevopsQuestionController
                         system.debug('enter500');
                         qus50ans = 0.0;    
                     }
-                    if( re.ResponseAnswer__c=='From 1 -  6 months'){
+                  else if( re.ResponseAnswer__c=='From  1 -  6 months'){
                         qus50ans = 1.0;    
                     }
-                    if( re.ResponseAnswer__c=='From 7 - 30 days'){
+                    else if( re.ResponseAnswer__c=='From 7 - 30 days'){
                         qus50ans = 2.0;    
                     }
-                    if( re.ResponseAnswer__c=='From 1 - 7 days'){
+                  else if( re.ResponseAnswer__c=='From 1 - 7 days'){
                         qus50ans = 3.0;    
                     }
                     else{
@@ -362,7 +362,7 @@ public class TC_DevopsQuestionController
                         system.debug('enter511');
                         qus51ans = 0.0;    
                     }
-                    else if( re.ResponseAnswer__c=='From 1 -  6 months'){
+                    else if( re.ResponseAnswer__c=='From  1 -  6 months'){
                         qus51ans = 1.0;    
                     }
                     else if( re.ResponseAnswer__c=='From 7 - 30 days'){
@@ -382,7 +382,7 @@ public class TC_DevopsQuestionController
                         system.debug('enter522');
                         qus52ans = 0.0;    
                     }
-                    else if( re.ResponseAnswer__c=='From 1 -  6 months'){
+                    else if( re.ResponseAnswer__c=='From  1 -  6 months'){
                         qus52ans = 1.0;    
                     }
                     else if( re.ResponseAnswer__c=='From 7 - 30 days'){
@@ -403,10 +403,10 @@ public class TC_DevopsQuestionController
                     else if( re.ResponseAnswer__c=='46 - 60%'){
                         qus53ans = 1.0;    
                     }
-                    else if( re.ResponseAnswer__c=='31–45%'){
+                    else if( re.ResponseAnswer__c=='31 - 45%'){
                     qus53ans = 2.0;    
                     }
-                    else if( re.ResponseAnswer__c=='16–30%'){
+                    else if( re.ResponseAnswer__c=='16 - 30%'){
                     qus53ans = 3.0;    
                     }
                     else{
