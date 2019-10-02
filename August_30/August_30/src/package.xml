@@ -113,6 +113,12 @@
     <members>User</members>
     <members>UserProvisioningRequest</members>
     <members>UserTerritory2Association</members>
+    <members>Address</members>
+    <members>AssociatedLocation</members>
+    <members>Award</members>
+    <members>BusinessLicense</members>
+    <members>Location</members>
+    <members>PersonEducation</members>
     <name>CustomObject</name>
   </types>
   <types>
@@ -161,6 +167,7 @@
     <members>TaskStatus</members>
     <members>TaskSubject</members>
     <members>TaskType</members>
+    <members>LocationType</members>
     <name>StandardValueSet</name>
   </types>
   <types>
